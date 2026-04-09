@@ -1,0 +1,26 @@
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import Explorer from './pages/Explorer'
+import Rankings from './pages/Rankings'
+import Methodology from './pages/Methodology'
+
+function App() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/explorer" element={<Explorer />} />
+          <Route path="/rankings" element={<Rankings />} />
+          <Route path="/methodology" element={<Methodology />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+export default App

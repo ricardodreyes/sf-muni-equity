@@ -1,0 +1,10 @@
+pandas>=2.0
+geopandas>=0.14
+shapely>=2.0
+duckdb>=0.10
+requests
+pyarrow
+scipy
+statsmodels
+scikit-learn
+fiona

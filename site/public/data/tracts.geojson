@@ -1,0 +1,1905 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075010100",
+        "name": "Pacific Heights",
+        "median_income": 215571,
+        "avg_delay_min": 3.6,
+        "num_routes": 8,
+        "population": 11015
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.447962,
+              37.798571
+            ],
+            [
+              -122.422922,
+              37.797071
+            ],
+            [
+              -122.424764,
+              37.785686
+            ],
+            [
+              -122.446022,
+              37.786668
+            ],
+            [
+              -122.447962,
+              37.798571
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075010200",
+        "name": "Marina District",
+        "median_income": 190059,
+        "avg_delay_min": 3.1,
+        "num_routes": 6,
+        "population": 9978
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.451665,
+              37.80503
+            ],
+            [
+              -122.421067,
+              37.804146
+            ],
+            [
+              -122.424431,
+              37.794604
+            ],
+            [
+              -122.450902,
+              37.795865
+            ],
+            [
+              -122.451665,
+              37.80503
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075010300",
+        "name": "Cow Hollow",
+        "median_income": 199138,
+        "avg_delay_min": 2.9,
+        "num_routes": 5,
+        "population": 7642
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.450642,
+              37.801756
+            ],
+            [
+              -122.428358,
+              37.800602
+            ],
+            [
+              -122.431448,
+              37.7923
+            ],
+            [
+              -122.448495,
+              37.79361
+            ],
+            [
+              -122.450642,
+              37.801756
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075011100",
+        "name": "Russian Hill",
+        "median_income": 169194,
+        "avg_delay_min": 4.5,
+        "num_routes": 7,
+        "population": 10602
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.428377,
+              37.805992
+            ],
+            [
+              -122.410224,
+              37.804347
+            ],
+            [
+              -122.41284,
+              37.794011
+            ],
+            [
+              -122.427451,
+              37.795087
+            ],
+            [
+              -122.428377,
+              37.805992
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075011200",
+        "name": "Nob Hill",
+        "median_income": 141341,
+        "avg_delay_min": 4.3,
+        "num_routes": 9,
+        "population": 13113
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.42469,
+              37.798925
+            ],
+            [
+              -122.407744,
+              37.797496
+            ],
+            [
+              -122.408956,
+              37.787996
+            ],
+            [
+              -122.422148,
+              37.788374
+            ],
+            [
+              -122.42469,
+              37.798925
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075011300",
+        "name": "Telegraph Hill",
+        "median_income": 160694,
+        "avg_delay_min": 4.2,
+        "num_routes": 4,
+        "population": 5763
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.41562,
+              37.806579
+            ],
+            [
+              -122.399532,
+              37.805873
+            ],
+            [
+              -122.400533,
+              37.797119
+            ],
+            [
+              -122.413518,
+              37.798353
+            ],
+            [
+              -122.41562,
+              37.806579
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075012400",
+        "name": "Tenderloin",
+        "median_income": 27640,
+        "avg_delay_min": 6.9,
+        "num_routes": 12,
+        "population": 28182
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.421396,
+              37.789473
+            ],
+            [
+              -122.403834,
+              37.788248
+            ],
+            [
+              -122.405068,
+              37.778758
+            ],
+            [
+              -122.420588,
+              37.779009
+            ],
+            [
+              -122.421396,
+              37.789473
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075012500",
+        "name": "SoMa West",
+        "median_income": 42473,
+        "avg_delay_min": 6.5,
+        "num_routes": 14,
+        "population": 18575
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.420014,
+              37.784181
+            ],
+            [
+              -122.399393,
+              37.783333
+            ],
+            [
+              -122.401232,
+              37.771167
+            ],
+            [
+              -122.418335,
+              37.772223
+            ],
+            [
+              -122.420014,
+              37.784181
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075012600",
+        "name": "SoMa East",
+        "median_income": 47005,
+        "avg_delay_min": 5.8,
+        "num_routes": 11,
+        "population": 15257
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.409871,
+              37.785439
+            ],
+            [
+              -122.384796,
+              37.784322
+            ],
+            [
+              -122.385262,
+              37.774816
+            ],
+            [
+              -122.407927,
+              37.775335
+            ],
+            [
+              -122.409871,
+              37.785439
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075012700",
+        "name": "Civic Center",
+        "median_income": 33917,
+        "avg_delay_min": 6.8,
+        "num_routes": 13,
+        "population": 13098
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.426516,
+              37.783963
+            ],
+            [
+              -122.409134,
+              37.78253
+            ],
+            [
+              -122.410963,
+              37.774322
+            ],
+            [
+              -122.425004,
+              37.775752
+            ],
+            [
+              -122.426516,
+              37.783963
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075020100",
+        "name": "Inner Mission",
+        "median_income": 62773,
+        "avg_delay_min": 5.3,
+        "num_routes": 10,
+        "population": 22733
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.428023,
+              37.769316
+            ],
+            [
+              -122.406856,
+              37.768431
+            ],
+            [
+              -122.409981,
+              37.756694
+            ],
+            [
+              -122.426964,
+              37.757974
+            ],
+            [
+              -122.428023,
+              37.769316
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075020200",
+        "name": "Outer Mission",
+        "median_income": 57334,
+        "avg_delay_min": 6.3,
+        "num_routes": 8,
+        "population": 19834
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.433865,
+              37.752806
+            ],
+            [
+              -122.411744,
+              37.751219
+            ],
+            [
+              -122.41308,
+              37.73779
+            ],
+            [
+              -122.431468,
+              37.73873
+            ],
+            [
+              -122.433865,
+              37.752806
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075020300",
+        "name": "Mission Dolores",
+        "median_income": 84806,
+        "avg_delay_min": 5.1,
+        "num_routes": 7,
+        "population": 14216
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.436211,
+              37.772377
+            ],
+            [
+              -122.418437,
+              37.77179
+            ],
+            [
+              -122.420751,
+              37.761782
+            ],
+            [
+              -122.434481,
+              37.762058
+            ],
+            [
+              -122.436211,
+              37.772377
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075022100",
+        "name": "Castro",
+        "median_income": 130692,
+        "avg_delay_min": 4.6,
+        "num_routes": 6,
+        "population": 11604
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.443528,
+              37.767769
+            ],
+            [
+              -122.425878,
+              37.766679
+            ],
+            [
+              -122.427784,
+              37.756606
+            ],
+            [
+              -122.442754,
+              37.757931
+            ],
+            [
+              -122.443528,
+              37.767769
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075022200",
+        "name": "Noe Valley",
+        "median_income": 141489,
+        "avg_delay_min": 4.2,
+        "num_routes": 5,
+        "population": 13226
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.445411,
+              37.756623
+            ],
+            [
+              -122.423537,
+              37.755129
+            ],
+            [
+              -122.425583,
+              37.743016
+            ],
+            [
+              -122.443507,
+              37.74486
+            ],
+            [
+              -122.445411,
+              37.756623
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075022300",
+        "name": "Eureka Valley",
+        "median_income": 132075,
+        "avg_delay_min": 4.6,
+        "num_routes": 4,
+        "population": 8113
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.445902,
+              37.762531
+            ],
+            [
+              -122.429551,
+              37.761658
+            ],
+            [
+              -122.432818,
+              37.753465
+            ],
+            [
+              -122.444742,
+              37.7542
+            ],
+            [
+              -122.445902,
+              37.762531
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075026100",
+        "name": "Bayview",
+        "median_income": 40667,
+        "avg_delay_min": 6.3,
+        "num_routes": 6,
+        "population": 17849
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.402706,
+              37.742189
+            ],
+            [
+              -122.37794,
+              37.741768
+            ],
+            [
+              -122.378344,
+              37.725248
+            ],
+            [
+              -122.400049,
+              37.726542
+            ],
+            [
+              -122.402706,
+              37.742189
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075026200",
+        "name": "Hunters Point",
+        "median_income": 35635,
+        "avg_delay_min": 5.9,
+        "num_routes": 4,
+        "population": 12210
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.393409,
+              37.733651
+            ],
+            [
+              -122.371111,
+              37.7329
+            ],
+            [
+              -122.373002,
+              37.718531
+            ],
+            [
+              -122.391596,
+              37.719807
+            ],
+            [
+              -122.393409,
+              37.733651
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075026300",
+        "name": "India Basin",
+        "median_income": 52608,
+        "avg_delay_min": 6.6,
+        "num_routes": 3,
+        "population": 8870
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.3866,
+              37.743826
+            ],
+            [
+              -122.36927,
+              37.742907
+            ],
+            [
+              -122.371496,
+              37.732758
+            ],
+            [
+              -122.385295,
+              37.733716
+            ],
+            [
+              -122.3866,
+              37.743826
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075030100",
+        "name": "Inner Sunset",
+        "median_income": 107050,
+        "avg_delay_min": 5.2,
+        "num_routes": 6,
+        "population": 16097
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.480593,
+              37.76792
+            ],
+            [
+              -122.454993,
+              37.766661
+            ],
+            [
+              -122.456408,
+              37.756602
+            ],
+            [
+              -122.47921,
+              37.757861
+            ],
+            [
+              -122.480593,
+              37.76792
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075030200",
+        "name": "Central Sunset",
+        "median_income": 93291,
+        "avg_delay_min": 5.3,
+        "num_routes": 4,
+        "population": 18759
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.499084,
+              37.761427
+            ],
+            [
+              -122.47036,
+              37.760042
+            ],
+            [
+              -122.47126,
+              37.748214
+            ],
+            [
+              -122.4988,
+              37.749481
+            ],
+            [
+              -122.499084,
+              37.761427
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075030300",
+        "name": "Outer Sunset",
+        "median_income": 90397,
+        "avg_delay_min": 5.9,
+        "num_routes": 3,
+        "population": 15699
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.514449,
+              37.759276
+            ],
+            [
+              -122.488295,
+              37.758996
+            ],
+            [
+              -122.490402,
+              37.746815
+            ],
+            [
+              -122.512157,
+              37.747716
+            ],
+            [
+              -122.514449,
+              37.759276
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075030400",
+        "name": "Parkside",
+        "median_income": 95180,
+        "avg_delay_min": 5,
+        "num_routes": 4,
+        "population": 14272
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.496404,
+              37.749969
+            ],
+            [
+              -122.469593,
+              37.748521
+            ],
+            [
+              -122.471775,
+              37.736171
+            ],
+            [
+              -122.493914,
+              37.737896
+            ],
+            [
+              -122.496404,
+              37.749969
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075035100",
+        "name": "Excelsior",
+        "median_income": 67917,
+        "avg_delay_min": 6.3,
+        "num_routes": 5,
+        "population": 21592
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.436162,
+              37.732839
+            ],
+            [
+              -122.414921,
+              37.731381
+            ],
+            [
+              -122.41616,
+              37.719881
+            ],
+            [
+              -122.434137,
+              37.720482
+            ],
+            [
+              -122.436162,
+              37.732839
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075035200",
+        "name": "Visitacion Valley",
+        "median_income": 58031,
+        "avg_delay_min": 6,
+        "num_routes": 4,
+        "population": 16620
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.416143,
+              37.723897
+            ],
+            [
+              -122.393756,
+              37.7224
+            ],
+            [
+              -122.396733,
+              37.710941
+            ],
+            [
+              -122.413715,
+              37.711739
+            ],
+            [
+              -122.416143,
+              37.723897
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075035300",
+        "name": "Crocker-Amazon",
+        "median_income": 73744,
+        "avg_delay_min": 6.1,
+        "num_routes": 3,
+        "population": 12287
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.449969,
+              37.725064
+            ],
+            [
+              -122.431096,
+              37.724932
+            ],
+            [
+              -122.433213,
+              37.714235
+            ],
+            [
+              -122.446749,
+              37.715356
+            ],
+            [
+              -122.449969,
+              37.725064
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075061100",
+        "name": "Financial District",
+        "median_income": 119943,
+        "avg_delay_min": 4.9,
+        "num_routes": 10,
+        "population": 8401
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.408661,
+              37.799431
+            ],
+            [
+              -122.391074,
+              37.7988
+            ],
+            [
+              -122.393783,
+              37.788428
+            ],
+            [
+              -122.407468,
+              37.789189
+            ],
+            [
+              -122.408661,
+              37.799431
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075061200",
+        "name": "Downtown",
+        "median_income": 96811,
+        "avg_delay_min": 5.6,
+        "num_routes": 12,
+        "population": 9716
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.413026,
+              37.793373
+            ],
+            [
+              -122.396326,
+              37.792687
+            ],
+            [
+              -122.398925,
+              37.784716
+            ],
+            [
+              -122.412782,
+              37.785699
+            ],
+            [
+              -122.413026,
+              37.793373
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075061300",
+        "name": "Union Square",
+        "median_income": 107980,
+        "avg_delay_min": 4.9,
+        "num_routes": 11,
+        "population": 6869
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.415193,
+              37.791853
+            ],
+            [
+              -122.4025,
+              37.790654
+            ],
+            [
+              -122.404815,
+              37.784689
+            ],
+            [
+              -122.413984,
+              37.785679
+            ],
+            [
+              -122.415193,
+              37.791853
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075015100",
+        "name": "Haight-Ashbury",
+        "median_income": 92136,
+        "avg_delay_min": 4.9,
+        "num_routes": 5,
+        "population": 11728
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.4616,
+              37.775197
+            ],
+            [
+              -122.43886,
+              37.774734
+            ],
+            [
+              -122.441957,
+              37.764066
+            ],
+            [
+              -122.45906,
+              37.765408
+            ],
+            [
+              -122.4616,
+              37.775197
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075015200",
+        "name": "Cole Valley",
+        "median_income": 111057,
+        "avg_delay_min": 5.1,
+        "num_routes": 4,
+        "population": 7864
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.462647,
+              37.770996
+            ],
+            [
+              -122.444691,
+              37.769119
+            ],
+            [
+              -122.445309,
+              37.761901
+            ],
+            [
+              -122.459626,
+              37.762173
+            ],
+            [
+              -122.462647,
+              37.770996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075013100",
+        "name": "Western Addition",
+        "median_income": 53849,
+        "avg_delay_min": 6.3,
+        "num_routes": 9,
+        "population": 16382
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.443857,
+              37.787894
+            ],
+            [
+              -122.420093,
+              37.786266
+            ],
+            [
+              -122.423629,
+              37.776035
+            ],
+            [
+              -122.440958,
+              37.777495
+            ],
+            [
+              -122.443857,
+              37.787894
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075013200",
+        "name": "Fillmore",
+        "median_income": 46791,
+        "avg_delay_min": 6.2,
+        "num_routes": 8,
+        "population": 13736
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.443874,
+              37.789706
+            ],
+            [
+              -122.425932,
+              37.788153
+            ],
+            [
+              -122.428862,
+              37.780526
+            ],
+            [
+              -122.44223,
+              37.781539
+            ],
+            [
+              -122.443874,
+              37.789706
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075013300",
+        "name": "Japantown",
+        "median_income": 69493,
+        "avg_delay_min": 5.4,
+        "num_routes": 7,
+        "population": 5788
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.437171,
+              37.78885
+            ],
+            [
+              -122.423101,
+              37.78798
+            ],
+            [
+              -122.425256,
+              37.781468
+            ],
+            [
+              -122.434207,
+              37.782925
+            ],
+            [
+              -122.437171,
+              37.78885
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075010700",
+        "name": "Chinatown",
+        "median_income": 32360,
+        "avg_delay_min": 7,
+        "num_routes": 8,
+        "population": 15806
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.4147,
+              37.799798
+            ],
+            [
+              -122.399221,
+              37.798863
+            ],
+            [
+              -122.402071,
+              37.790064
+            ],
+            [
+              -122.412635,
+              37.791631
+            ],
+            [
+              -122.4147,
+              37.799798
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075010800",
+        "name": "North Beach",
+        "median_income": 61209,
+        "avg_delay_min": 6.1,
+        "num_routes": 6,
+        "population": 10350
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.419894,
+              37.804224
+            ],
+            [
+              -122.401228,
+              37.803184
+            ],
+            [
+              -122.403888,
+              37.795828
+            ],
+            [
+              -122.417262,
+              37.796705
+            ],
+            [
+              -122.419894,
+              37.804224
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075022700",
+        "name": "Potrero Hill",
+        "median_income": 129506,
+        "avg_delay_min": 4.6,
+        "num_routes": 5,
+        "population": 12128
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.409201,
+              37.766939
+            ],
+            [
+              -122.390793,
+              37.765391
+            ],
+            [
+              -122.393283,
+              37.753962
+            ],
+            [
+              -122.406843,
+              37.754065
+            ],
+            [
+              -122.409201,
+              37.766939
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075022800",
+        "name": "Dogpatch",
+        "median_income": 110903,
+        "avg_delay_min": 4.3,
+        "num_routes": 4,
+        "population": 8537
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.398883,
+              37.763819
+            ],
+            [
+              -122.381609,
+              37.76269
+            ],
+            [
+              -122.383155,
+              37.752675
+            ],
+            [
+              -122.396906,
+              37.753624
+            ],
+            [
+              -122.398883,
+              37.763819
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075031100",
+        "name": "Twin Peaks",
+        "median_income": 129278,
+        "avg_delay_min": 4.2,
+        "num_routes": 3,
+        "population": 6333
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.456725,
+              37.758201
+            ],
+            [
+              -122.439688,
+              37.757134
+            ],
+            [
+              -122.440016,
+              37.747141
+            ],
+            [
+              -122.454415,
+              37.748633
+            ],
+            [
+              -122.456725,
+              37.758201
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075031200",
+        "name": "Diamond Heights",
+        "median_income": 116489,
+        "avg_delay_min": 5.3,
+        "num_routes": 3,
+        "population": 7376
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.451137,
+              37.750232
+            ],
+            [
+              -122.433992,
+              37.749703
+            ],
+            [
+              -122.435628,
+              37.739886
+            ],
+            [
+              -122.449311,
+              37.740435
+            ],
+            [
+              -122.451137,
+              37.750232
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075031300",
+        "name": "Glen Park",
+        "median_income": 132473,
+        "avg_delay_min": 4.4,
+        "num_routes": 5,
+        "population": 9913
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.444933,
+              37.743865
+            ],
+            [
+              -122.426981,
+              37.742323
+            ],
+            [
+              -122.42773,
+              37.732143
+            ],
+            [
+              -122.442457,
+              37.733353
+            ],
+            [
+              -122.444933,
+              37.743865
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075040100",
+        "name": "Inner Richmond",
+        "median_income": 89683,
+        "avg_delay_min": 5.9,
+        "num_routes": 6,
+        "population": 16543
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.475289,
+              37.787036
+            ],
+            [
+              -122.448175,
+              37.786035
+            ],
+            [
+              -122.450956,
+              37.776507
+            ],
+            [
+              -122.473035,
+              37.777077
+            ],
+            [
+              -122.475289,
+              37.787036
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075040200",
+        "name": "Central Richmond",
+        "median_income": 92365,
+        "avg_delay_min": 5.5,
+        "num_routes": 4,
+        "population": 15187
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.491117,
+              37.785371
+            ],
+            [
+              -122.465716,
+              37.784779
+            ],
+            [
+              -122.466619,
+              37.774125
+            ],
+            [
+              -122.489166,
+              37.775956
+            ],
+            [
+              -122.491117,
+              37.785371
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075040300",
+        "name": "Outer Richmond",
+        "median_income": 102663,
+        "avg_delay_min": 5,
+        "num_routes": 3,
+        "population": 14042
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.510718,
+              37.783784
+            ],
+            [
+              -122.483151,
+              37.782892
+            ],
+            [
+              -122.485688,
+              37.772134
+            ],
+            [
+              -122.507616,
+              37.773648
+            ],
+            [
+              -122.510718,
+              37.783784
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075025100",
+        "name": "Bernal Heights",
+        "median_income": 115134,
+        "avg_delay_min": 4.3,
+        "num_routes": 5,
+        "population": 13115
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.424901,
+              37.74664
+            ],
+            [
+              -122.405818,
+              37.745552
+            ],
+            [
+              -122.407277,
+              37.733451
+            ],
+            [
+              -122.421208,
+              37.734903
+            ],
+            [
+              -122.424901,
+              37.74664
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075036100",
+        "name": "Oceanview",
+        "median_income": 63292,
+        "avg_delay_min": 5.5,
+        "num_routes": 4,
+        "population": 14507
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.46675,
+              37.730706
+            ],
+            [
+              -122.444338,
+              37.729795
+            ],
+            [
+              -122.44721,
+              37.717068
+            ],
+            [
+              -122.464434,
+              37.718599
+            ],
+            [
+              -122.46675,
+              37.730706
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075036200",
+        "name": "Ingleside",
+        "median_income": 75336,
+        "avg_delay_min": 5.7,
+        "num_routes": 5,
+        "population": 12918
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.454304,
+              37.729401
+            ],
+            [
+              -122.431429,
+              37.728804
+            ],
+            [
+              -122.434732,
+              37.718188
+            ],
+            [
+              -122.451141,
+              37.719134
+            ],
+            [
+              -122.454304,
+              37.729401
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075036300",
+        "name": "Ingleside Terraces",
+        "median_income": 84774,
+        "avg_delay_min": 5.8,
+        "num_routes": 3,
+        "population": 8549
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.471975,
+              37.732839
+            ],
+            [
+              -122.45288,
+              37.731824
+            ],
+            [
+              -122.455333,
+              37.721811
+            ],
+            [
+              -122.468703,
+              37.722293
+            ],
+            [
+              -122.471975,
+              37.732839
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075014100",
+        "name": "Presidio Heights",
+        "median_income": 199710,
+        "avg_delay_min": 3.8,
+        "num_routes": 4,
+        "population": 7050
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.460956,
+              37.793131
+            ],
+            [
+              -122.439696,
+              37.792627
+            ],
+            [
+              -122.44065,
+              37.782477
+            ],
+            [
+              -122.458852,
+              37.783057
+            ],
+            [
+              -122.460956,
+              37.793131
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "06075014200",
+        "name": "Laurel Heights",
+        "median_income": 173732,
+        "avg_delay_min": 4.3,
+        "num_routes": 5,
+        "population": 8673
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.464997,
+              37.789703
+            ],
+            [
+              -122.445639,
+              37.788349
+            ],
+            [
+              -122.447432,
+              37.780912
+            ],
+            [
+              -122.461474,
+              37.78183
+            ],
+            [
+              -122.464997,
+              37.789703
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

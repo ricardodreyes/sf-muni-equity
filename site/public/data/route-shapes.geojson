@@ -1,0 +1,909 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "14",
+        "route_name": "14 Mission",
+        "avg_delay_min": 6.8,
+        "pct_on_time": 42.8,
+        "performance": "poor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.396,
+            37.79
+          ],
+          [
+            -122.407,
+            37.786
+          ],
+          [
+            -122.415,
+            37.779
+          ],
+          [
+            -122.419,
+            37.766
+          ],
+          [
+            -122.422,
+            37.753
+          ],
+          [
+            -122.426,
+            37.741
+          ],
+          [
+            -122.432,
+            37.727
+          ],
+          [
+            -122.44,
+            37.713
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "38",
+        "route_name": "38 Geary",
+        "avg_delay_min": 5.3,
+        "pct_on_time": 52,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.397,
+            37.789
+          ],
+          [
+            -122.41,
+            37.787
+          ],
+          [
+            -122.419,
+            37.786
+          ],
+          [
+            -122.435,
+            37.783
+          ],
+          [
+            -122.452,
+            37.781
+          ],
+          [
+            -122.47,
+            37.779
+          ],
+          [
+            -122.488,
+            37.778
+          ],
+          [
+            -122.51,
+            37.776
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "N",
+        "route_name": "N Judah",
+        "avg_delay_min": 3.6,
+        "pct_on_time": 59.5,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.396,
+            37.79
+          ],
+          [
+            -122.407,
+            37.786
+          ],
+          [
+            -122.42,
+            37.779
+          ],
+          [
+            -122.437,
+            37.766
+          ],
+          [
+            -122.449,
+            37.763
+          ],
+          [
+            -122.462,
+            37.761
+          ],
+          [
+            -122.476,
+            37.76
+          ],
+          [
+            -122.497,
+            37.76
+          ],
+          [
+            -122.509,
+            37.76
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "T",
+        "route_name": "T Third Street",
+        "avg_delay_min": 6.5,
+        "pct_on_time": 44.7,
+        "performance": "poor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.396,
+            37.79
+          ],
+          [
+            -122.391,
+            37.783
+          ],
+          [
+            -122.39,
+            37.775
+          ],
+          [
+            -122.392,
+            37.764
+          ],
+          [
+            -122.393,
+            37.753
+          ],
+          [
+            -122.395,
+            37.74
+          ],
+          [
+            -122.391,
+            37.73
+          ],
+          [
+            -122.387,
+            37.72
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "22",
+        "route_name": "22 Fillmore",
+        "avg_delay_min": 5.2,
+        "pct_on_time": 49.1,
+        "performance": "poor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.437,
+            37.8
+          ],
+          [
+            -122.434,
+            37.793
+          ],
+          [
+            -122.432,
+            37.785
+          ],
+          [
+            -122.432,
+            37.778
+          ],
+          [
+            -122.427,
+            37.766
+          ],
+          [
+            -122.419,
+            37.76
+          ],
+          [
+            -122.407,
+            37.757
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "29",
+        "route_name": "29 Sunset",
+        "avg_delay_min": 4.1,
+        "pct_on_time": 56.6,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.397,
+            37.789
+          ],
+          [
+            -122.459,
+            37.786
+          ],
+          [
+            -122.461,
+            37.775
+          ],
+          [
+            -122.463,
+            37.763
+          ],
+          [
+            -122.466,
+            37.75
+          ],
+          [
+            -122.469,
+            37.738
+          ],
+          [
+            -122.472,
+            37.725
+          ],
+          [
+            -122.476,
+            37.713
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "1",
+        "route_name": "1 California",
+        "avg_delay_min": 4,
+        "pct_on_time": 60.6,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.397,
+            37.793
+          ],
+          [
+            -122.41,
+            37.792
+          ],
+          [
+            -122.42,
+            37.79
+          ],
+          [
+            -122.435,
+            37.788
+          ],
+          [
+            -122.45,
+            37.786
+          ],
+          [
+            -122.466,
+            37.784
+          ],
+          [
+            -122.483,
+            37.782
+          ],
+          [
+            -122.5,
+            37.78
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "49",
+        "route_name": "49 Van Ness-Mission",
+        "avg_delay_min": 6.3,
+        "pct_on_time": 45.4,
+        "performance": "poor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.437,
+            37.806
+          ],
+          [
+            -122.424,
+            37.798
+          ],
+          [
+            -122.422,
+            37.79
+          ],
+          [
+            -122.42,
+            37.781
+          ],
+          [
+            -122.418,
+            37.77
+          ],
+          [
+            -122.42,
+            37.758
+          ],
+          [
+            -122.424,
+            37.745
+          ],
+          [
+            -122.428,
+            37.73
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "30",
+        "route_name": "30 Stockton",
+        "avg_delay_min": 4.9,
+        "pct_on_time": 52.3,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.437,
+            37.802
+          ],
+          [
+            -122.424,
+            37.8
+          ],
+          [
+            -122.408,
+            37.798
+          ],
+          [
+            -122.407,
+            37.794
+          ],
+          [
+            -122.408,
+            37.787
+          ],
+          [
+            -122.406,
+            37.783
+          ],
+          [
+            -122.394,
+            37.777
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "5",
+        "route_name": "5 Fulton",
+        "avg_delay_min": 5.1,
+        "pct_on_time": 49.2,
+        "performance": "poor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.408,
+            37.785
+          ],
+          [
+            -122.418,
+            37.779
+          ],
+          [
+            -122.428,
+            37.778
+          ],
+          [
+            -122.442,
+            37.776
+          ],
+          [
+            -122.458,
+            37.774
+          ],
+          [
+            -122.474,
+            37.773
+          ],
+          [
+            -122.49,
+            37.772
+          ],
+          [
+            -122.51,
+            37.771
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "8",
+        "route_name": "8 Bayshore",
+        "avg_delay_min": 5.9,
+        "pct_on_time": 48.3,
+        "performance": "poor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.397,
+            37.789
+          ],
+          [
+            -122.404,
+            37.78
+          ],
+          [
+            -122.41,
+            37.77
+          ],
+          [
+            -122.409,
+            37.758
+          ],
+          [
+            -122.405,
+            37.745
+          ],
+          [
+            -122.4,
+            37.733
+          ],
+          [
+            -122.395,
+            37.722
+          ],
+          [
+            -122.39,
+            37.714
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "9",
+        "route_name": "9 San Bruno",
+        "avg_delay_min": 6.1,
+        "pct_on_time": 46.2,
+        "performance": "poor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.397,
+            37.789
+          ],
+          [
+            -122.404,
+            37.78
+          ],
+          [
+            -122.412,
+            37.77
+          ],
+          [
+            -122.41,
+            37.758
+          ],
+          [
+            -122.413,
+            37.745
+          ],
+          [
+            -122.417,
+            37.733
+          ],
+          [
+            -122.42,
+            37.722
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "24",
+        "route_name": "24 Divisadero",
+        "avg_delay_min": 5.1,
+        "pct_on_time": 53.6,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.441,
+            37.8
+          ],
+          [
+            -122.44,
+            37.793
+          ],
+          [
+            -122.438,
+            37.785
+          ],
+          [
+            -122.436,
+            37.778
+          ],
+          [
+            -122.434,
+            37.77
+          ],
+          [
+            -122.432,
+            37.76
+          ],
+          [
+            -122.433,
+            37.752
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "44",
+        "route_name": "44 O'Shaughnessy",
+        "avg_delay_min": 5.3,
+        "pct_on_time": 53.5,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.462,
+            37.784
+          ],
+          [
+            -122.458,
+            37.778
+          ],
+          [
+            -122.452,
+            37.77
+          ],
+          [
+            -122.446,
+            37.762
+          ],
+          [
+            -122.438,
+            37.755
+          ],
+          [
+            -122.428,
+            37.748
+          ],
+          [
+            -122.418,
+            37.74
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "J",
+        "route_name": "J Church",
+        "avg_delay_min": 3.9,
+        "pct_on_time": 61.8,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.397,
+            37.79
+          ],
+          [
+            -122.407,
+            37.785
+          ],
+          [
+            -122.42,
+            37.779
+          ],
+          [
+            -122.428,
+            37.77
+          ],
+          [
+            -122.432,
+            37.758
+          ],
+          [
+            -122.437,
+            37.748
+          ],
+          [
+            -122.443,
+            37.738
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "K",
+        "route_name": "K Ingleside",
+        "avg_delay_min": 4.6,
+        "pct_on_time": 54.3,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.397,
+            37.79
+          ],
+          [
+            -122.407,
+            37.785
+          ],
+          [
+            -122.42,
+            37.779
+          ],
+          [
+            -122.454,
+            37.742
+          ],
+          [
+            -122.46,
+            37.733
+          ],
+          [
+            -122.46,
+            37.722
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "L",
+        "route_name": "L Taraval",
+        "avg_delay_min": 3.6,
+        "pct_on_time": 61.2,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.397,
+            37.79
+          ],
+          [
+            -122.407,
+            37.785
+          ],
+          [
+            -122.42,
+            37.779
+          ],
+          [
+            -122.464,
+            37.742
+          ],
+          [
+            -122.472,
+            37.743
+          ],
+          [
+            -122.485,
+            37.742
+          ],
+          [
+            -122.497,
+            37.742
+          ],
+          [
+            -122.508,
+            37.742
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "M",
+        "route_name": "M Ocean View",
+        "avg_delay_min": 5,
+        "pct_on_time": 50.1,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.397,
+            37.79
+          ],
+          [
+            -122.407,
+            37.785
+          ],
+          [
+            -122.42,
+            37.779
+          ],
+          [
+            -122.454,
+            37.742
+          ],
+          [
+            -122.459,
+            37.735
+          ],
+          [
+            -122.461,
+            37.728
+          ],
+          [
+            -122.46,
+            37.72
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "15",
+        "route_name": "15 Bayview-Hunters Point",
+        "avg_delay_min": 7.2,
+        "pct_on_time": 38,
+        "performance": "poor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.393,
+            37.78
+          ],
+          [
+            -122.392,
+            37.77
+          ],
+          [
+            -122.393,
+            37.758
+          ],
+          [
+            -122.394,
+            37.748
+          ],
+          [
+            -122.392,
+            37.738
+          ],
+          [
+            -122.39,
+            37.728
+          ],
+          [
+            -122.387,
+            37.718
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "48",
+        "route_name": "48 Quintara-24th St",
+        "avg_delay_min": 4.8,
+        "pct_on_time": 52,
+        "performance": "fair"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.497,
+            37.748
+          ],
+          [
+            -122.482,
+            37.75
+          ],
+          [
+            -122.466,
+            37.752
+          ],
+          [
+            -122.452,
+            37.754
+          ],
+          [
+            -122.44,
+            37.756
+          ],
+          [
+            -122.428,
+            37.755
+          ],
+          [
+            -122.415,
+            37.753
+          ],
+          [
+            -122.405,
+            37.752
+          ]
+        ]
+      }
+    }
+  ]
+}

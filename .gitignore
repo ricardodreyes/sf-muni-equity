@@ -1,0 +1,24 @@
+# Dependencies
+site/node_modules/
+
+# Build output
+site/dist/
+site/dist-ssr/
+
+# Environment files (contain API tokens)
+.env
+.env.local
+*.local
+
+# Pipeline data (large files, not for version control)
+pipeline/data/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
