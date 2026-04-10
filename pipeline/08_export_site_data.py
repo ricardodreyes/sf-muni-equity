@@ -212,8 +212,8 @@ def build_tracts_geojson(con):
                             if pd.notna(row.get('median_household_income'))
                             else None
                         ),
-                        "avg_delay_min": round(float(row.get('avg_delay_min', 0)), 1),
-                        "num_routes": int(row.get('num_routes', 0)),
+                        "avg_delay_min": round(float(row['avg_delay_min']), 1) if pd.notna(row.get('avg_delay_min')) else 0,
+                        "num_routes": int(row['num_routes']) if pd.notna(row.get('num_routes')) else 0,
                         "geoid": str(row['geoid']),
                         "population": 0,
                     }

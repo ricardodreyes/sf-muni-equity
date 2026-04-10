@@ -1,21 +1,14 @@
 """
-Script 05: Compute delays by joining stop_observations to stop_times.
-Calculates delay_seconds, on_time flag, hour_of_day, and day_of_week.
+Script 05: Compute delays from stop_observations.
+The 511.org stop_observations already contains scheduled_arrival_time and
+observed_arrival_time, plus route_id and service_date, so we compute delays
+directly without joining to stop_times.
 """
 
 import os
 import duckdb
-import pandas as pd
-import numpy as np
 
 DB_PATH = os.path.join(os.path.dirname(__file__), 'data', 'muni_equity.duckdb')
-
-
-def parse_gtfs_time(time_str):
-    """Parse GTFS time (HH:MM:SS), handles times > 24:00:00."""
-    parts = time_str.strip().split(':')
-    h, m, s = int(parts[0]), int(parts[1]), int(parts[2])
-    return h * 3600 + m * 60 + s  # total seconds since midnight (can exceed 86400)
 
 
 def main():
@@ -23,187 +16,108 @@ def main():
 
     con = duckdb.connect(DB_PATH)
 
-    # ----------------------------------------------------------------
-    # Check available tables
-    # ----------------------------------------------------------------
     tables = [r[0] for r in con.execute("SHOW TABLES").fetchall()]
     print(f"  Available tables: {tables}")
 
     if 'stop_observations' not in tables:
-        print("  WARNING: stop_observations table not found. Skipping delay computation.")
+        print("  WARNING: stop_observations table not found. Skipping.")
         con.close()
         return
 
     obs_count = con.execute("SELECT COUNT(*) FROM stop_observations").fetchone()[0]
-    st_count = con.execute("SELECT COUNT(*) FROM stop_times").fetchone()[0]
     print(f"  stop_observations rows: {obs_count:,}")
-    print(f"  stop_times rows: {st_count:,}")
 
     if obs_count == 0:
         print("  No observations to process. Exiting.")
         con.close()
         return
 
-    # ----------------------------------------------------------------
-    # Join stop_observations to stop_times
-    # Primary join: trip_id + stop_id
-    # Fallback: trip_id + stop_sequence (if primary yields too few)
-    # ----------------------------------------------------------------
-    print("  Joining observations to scheduled stop_times...")
+    # The stop_observations table already has:
+    #   trip_id, route_id, stop_sequence, from_stop_id, to_stop_id,
+    #   scheduled_arrival_time, observed_arrival_time, service_date
+    # So we can compute delays directly in SQL.
 
-    primary_sql = """
-        SELECT
-            o.trip_id,
-            o.stop_id,
-            o.stop_sequence,
-            st.arrival_time AS scheduled_time,
-            o.observed_arrival_time,
-            o.month
-        FROM stop_observations o
-        INNER JOIN stop_times st
-            ON o.trip_id = st.trip_id
-            AND o.stop_id = st.stop_id
-    """
-    primary_df = con.execute(primary_sql).fetchdf()
-    print(f"  Primary join (trip_id + stop_id): {len(primary_df):,} rows")
-
-    # Fallback: join on trip_id + stop_sequence if primary is too sparse
-    if len(primary_df) < obs_count * 0.5:
-        print("  Primary join yielded < 50% of observations. Trying fallback on stop_sequence...")
-        fallback_sql = """
-            SELECT
-                o.trip_id,
-                o.stop_id,
-                o.stop_sequence,
-                st.arrival_time AS scheduled_time,
-                o.observed_arrival_time,
-                o.month
-            FROM stop_observations o
-            INNER JOIN stop_times st
-                ON o.trip_id = st.trip_id
-                AND o.stop_sequence = st.stop_sequence
-        """
-        fallback_df = con.execute(fallback_sql).fetchdf()
-        print(f"  Fallback join (trip_id + stop_sequence): {len(fallback_df):,} rows")
-
-        if len(fallback_df) > len(primary_df):
-            print("  Using fallback join results (more matches).")
-            joined = fallback_df
-        else:
-            joined = primary_df
-    else:
-        joined = primary_df
-
-    if len(joined) == 0:
-        print("  ERROR: No joined records. Cannot compute delays.")
-        con.close()
-        return
-
-    # ----------------------------------------------------------------
-    # Compute delay fields
-    # ----------------------------------------------------------------
-    print("  Computing delay_seconds and related fields...")
-
-    # Drop rows with missing times
-    joined = joined.dropna(subset=['scheduled_time', 'observed_arrival_time'])
-
-    # Parse times to seconds
-    joined['scheduled_seconds'] = joined['scheduled_time'].apply(parse_gtfs_time)
-    joined['observed_seconds'] = joined['observed_arrival_time'].apply(parse_gtfs_time)
-
-    # delay_seconds = observed - scheduled
-    joined['delay_seconds'] = joined['observed_seconds'] - joined['scheduled_seconds']
-
-    # on_time: -60 <= delay <= 300 seconds (1 min early to 5 min late)
-    joined['on_time'] = (joined['delay_seconds'] >= -60) & (joined['delay_seconds'] <= 300)
-
-    # hour_of_day from scheduled time (mod 24 for times >= 24:00)
-    joined['hour_of_day'] = (joined['scheduled_seconds'] // 3600) % 24
-
-    # ----------------------------------------------------------------
-    # day_of_week: attempt to derive from available data
-    # ----------------------------------------------------------------
-    # Check if calendar_dates table exists for date mapping
-    if 'calendar_dates' in tables:
-        print("  Using calendar_dates for day_of_week...")
-        cal_dates = con.execute("""
-            SELECT service_id, date,
-                   EXTRACT(DOW FROM CAST(date AS DATE)) AS dow
-            FROM calendar_dates
-        """).fetchdf()
-        # DuckDB DOW: 0=Sunday, 1=Monday... convert to 0=Monday...6=Sunday
-        cal_dates['day_of_week'] = (cal_dates['dow'].astype(int) - 1) % 7
-
-        # Get service_id for each trip
-        trip_service = con.execute("SELECT trip_id, service_id FROM trips").fetchdf()
-
-        # Merge trip -> service_id -> date -> dow
-        trip_dow = trip_service.merge(cal_dates[['service_id', 'day_of_week']].drop_duplicates(),
-                                       on='service_id', how='left')
-        # Take first day_of_week per trip (some trips may have multiple service dates)
-        trip_dow = trip_dow.groupby('trip_id')['day_of_week'].first().reset_index()
-
-        joined = joined.merge(trip_dow, on='trip_id', how='left')
-        joined['day_of_week'] = joined['day_of_week'].fillna(0).astype(int)
-    else:
-        # Fallback: infer from month and trip_id hash
-        print("  No calendar_dates table. Deriving day_of_week from trip patterns...")
-        # Use a deterministic hash of trip_id to assign a day (pseudo-assignment)
-        joined['day_of_week'] = joined['trip_id'].apply(
-            lambda x: hash(str(x)) % 7
-        )
-
-    # ----------------------------------------------------------------
-    # Get route_id for each trip
-    # ----------------------------------------------------------------
-    print("  Mapping trips to routes...")
-    trip_routes = con.execute("SELECT trip_id, route_id FROM trips").fetchdf()
-    joined = joined.merge(trip_routes, on='trip_id', how='left')
-
-    # ----------------------------------------------------------------
-    # Filter out extreme outliers (likely data errors)
-    # ----------------------------------------------------------------
-    before_filter = len(joined)
-    # Keep delays between -10 min and 60 min
-    joined = joined[(joined['delay_seconds'] >= -600) & (joined['delay_seconds'] <= 3600)]
-    after_filter = len(joined)
-    if before_filter > after_filter:
-        print(f"  Filtered {before_filter - after_filter:,} extreme outliers "
-              f"(keeping -10min to 60min range)")
-
-    # ----------------------------------------------------------------
-    # Save to DuckDB
-    # ----------------------------------------------------------------
-    print("  Saving delays table to DuckDB...")
-
-    delays_df = joined[['trip_id', 'route_id', 'stop_id', 'stop_sequence',
-                         'scheduled_seconds', 'observed_seconds', 'delay_seconds',
-                         'on_time', 'hour_of_day', 'day_of_week', 'month']].copy()
-
-    # Ensure correct types
-    delays_df['on_time'] = delays_df['on_time'].astype(bool)
-    delays_df['hour_of_day'] = delays_df['hour_of_day'].astype(int)
-    delays_df['day_of_week'] = delays_df['day_of_week'].astype(int)
+    print("  Computing delays directly from stop_observations...")
 
     con.execute("DROP TABLE IF EXISTS delays")
-    con.execute("CREATE TABLE delays AS SELECT * FROM delays_df")
+    con.execute("""
+        CREATE TABLE delays AS
+        WITH parsed AS (
+            SELECT
+                trip_id,
+                route_id,
+                COALESCE(to_stop_id, from_stop_id) AS stop_id,
+                CAST(stop_sequence AS INTEGER) AS stop_sequence,
+                scheduled_arrival_time,
+                observed_arrival_time,
+                service_date,
+                month,
+
+                -- Parse scheduled time to seconds
+                CAST(SPLIT_PART(scheduled_arrival_time, ':', 1) AS INTEGER) * 3600
+                + CAST(SPLIT_PART(scheduled_arrival_time, ':', 2) AS INTEGER) * 60
+                + CAST(SPLIT_PART(scheduled_arrival_time, ':', 3) AS INTEGER) AS sched_secs,
+
+                -- Parse observed time to seconds
+                CAST(SPLIT_PART(observed_arrival_time, ':', 1) AS INTEGER) * 3600
+                + CAST(SPLIT_PART(observed_arrival_time, ':', 2) AS INTEGER) * 60
+                + CAST(SPLIT_PART(observed_arrival_time, ':', 3) AS INTEGER) AS obs_secs
+
+            FROM stop_observations
+            WHERE scheduled_arrival_time IS NOT NULL
+              AND observed_arrival_time IS NOT NULL
+              AND LENGTH(scheduled_arrival_time) >= 7
+              AND LENGTH(observed_arrival_time) >= 7
+        )
+        SELECT
+            trip_id,
+            route_id,
+            stop_id,
+            stop_sequence,
+            sched_secs AS scheduled_seconds,
+            obs_secs AS observed_seconds,
+            (obs_secs - sched_secs) AS delay_seconds,
+            CASE WHEN (obs_secs - sched_secs) >= -60
+                  AND (obs_secs - sched_secs) <= 300
+                 THEN TRUE ELSE FALSE END AS on_time,
+            (sched_secs / 3600) % 24 AS hour_of_day,
+            -- day_of_week from service_date: 0=Mon ... 6=Sun
+            CASE
+                WHEN service_date IS NOT NULL AND LENGTH(service_date) = 8 THEN
+                    (EXTRACT(DOW FROM CAST(
+                        SUBSTR(service_date, 1, 4) || '-' ||
+                        SUBSTR(service_date, 5, 2) || '-' ||
+                        SUBSTR(service_date, 7, 2) AS DATE
+                    )) + 6) % 7
+                ELSE 0
+            END AS day_of_week,
+            month
+        FROM parsed
+        WHERE (obs_secs - sched_secs) >= -600   -- filter: no more than 10 min early
+          AND (obs_secs - sched_secs) <= 3600    -- filter: no more than 60 min late
+    """)
 
     row_count = con.execute("SELECT COUNT(*) FROM delays").fetchone()[0]
-    print(f"  Saved {row_count:,} delay records to DuckDB.")
+    print(f"  Created delays table: {row_count:,} records")
 
-    # ----------------------------------------------------------------
-    # Summary statistics
-    # ----------------------------------------------------------------
-    total_obs = len(delays_df)
-    on_time_pct = delays_df['on_time'].mean() * 100
-    mean_delay = delays_df['delay_seconds'].mean()
+    # Summary stats
+    stats = con.execute("""
+        SELECT
+            COUNT(*) AS total,
+            AVG(delay_seconds) AS mean_delay,
+            MEDIAN(delay_seconds) AS median_delay,
+            STDDEV(delay_seconds) AS std_delay,
+            100.0 * SUM(CASE WHEN on_time THEN 1 ELSE 0 END) / COUNT(*) AS pct_on_time,
+            COUNT(DISTINCT route_id) AS num_routes
+        FROM delays
+    """).fetchone()
 
     print(f"\n  Summary:")
-    print(f"    Total delay observations: {total_obs:,}")
-    print(f"    On-time rate (-1min to +5min): {on_time_pct:.1f}%")
-    print(f"    Mean delay: {mean_delay:.0f} seconds ({mean_delay/60:.1f} minutes)")
-    print(f"    Median delay: {delays_df['delay_seconds'].median():.0f} seconds")
-    print(f"    Std dev: {delays_df['delay_seconds'].std():.0f} seconds")
+    print(f"    Total delay observations: {stats[0]:,}")
+    print(f"    Mean delay: {stats[1]:.0f} seconds ({stats[1]/60:.1f} minutes)")
+    print(f"    Median delay: {stats[2]:.0f} seconds ({stats[2]/60:.1f} minutes)")
+    print(f"    On-time rate (-1min to +5min): {stats[4]:.1f}%")
+    print(f"    Routes with data: {stats[5]}")
 
     con.close()
     print("\nStep 5 complete.")

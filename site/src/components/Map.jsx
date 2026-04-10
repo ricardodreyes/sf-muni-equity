@@ -197,10 +197,10 @@ export default function Map({ onRouteClick, className = '' }) {
   if (blocked) {
     return (
       <div className={`relative ${className}`}>
-        <div className="w-full h-full rounded-xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center p-8">
+        <div className="w-full h-full bg-[var(--surface)] flex items-center justify-center p-8">
           <div className="text-center">
-            <div className="text-red-500 font-semibold mb-2">Map Disabled</div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">{blocked}</p>
+            <div className="text-[var(--accent)] font-semibold text-[13px] mb-1">Map unavailable</div>
+            <p className="text-[12px] text-[var(--muted)]">{blocked}</p>
           </div>
         </div>
       </div>
@@ -209,63 +209,64 @@ export default function Map({ onRouteClick, className = '' }) {
 
   return (
     <div className={`relative ${className}`}>
-      <div ref={mapContainer} className="w-full h-full rounded-xl overflow-hidden" />
+      <div ref={mapContainer} className="w-full h-full overflow-hidden" />
 
       {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100/80 dark:bg-gray-900/80 rounded-xl">
-          <div className="text-sm text-gray-500 dark:text-gray-400">Loading map data...</div>
+        <div className="absolute inset-0 flex items-center justify-center bg-[var(--paper)]/80">
+          <div className="text-[13px] text-[var(--muted)]">Loading map...</div>
         </div>
       )}
 
       {warning && (
-        <div className="absolute top-3 right-14 bg-yellow-100 dark:bg-yellow-900/80 text-yellow-800 dark:text-yellow-200 text-xs px-3 py-1.5 rounded-lg shadow z-10">
+        <div className="absolute top-3 right-14 bg-amber-50 dark:bg-amber-900/40 text-amber-800 dark:text-amber-200 text-[11px] px-3 py-1.5 z-10 border border-amber-200 dark:border-amber-800" style={{ borderRadius: '3px' }}>
           {warning}
         </div>
       )}
 
       {/* Layer toggle */}
-      <div className="absolute top-3 left-3 bg-white dark:bg-[#1e2130] rounded-lg shadow-lg p-1 flex gap-1 text-xs font-medium z-10">
+      <div className="absolute top-3 left-3 bg-[var(--surface)] border border-[var(--border)] p-0.5 flex gap-0.5 text-[11px] font-medium z-10" style={{ borderRadius: '3px' }}>
         <button
           onClick={() => toggleLayer('income')}
-          className={`px-3 py-1.5 rounded-md transition-colors ${
+          className={`px-2.5 py-1 transition-colors ${
             layerMode === 'income'
-              ? 'bg-[#1a1f36] dark:bg-white text-white dark:text-[#1a1f36]'
-              : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/10'
+              ? 'bg-[var(--ink)] text-[var(--paper)]'
+              : 'text-[var(--muted)] hover:text-[var(--ink)]'
           }`}
+          style={{ borderRadius: '2px' }}
         >
           Income
         </button>
         <button
           onClick={() => toggleLayer('delay')}
-          className={`px-3 py-1.5 rounded-md transition-colors ${
+          className={`px-2.5 py-1 transition-colors ${
             layerMode === 'delay'
-              ? 'bg-[#1a1f36] dark:bg-white text-white dark:text-[#1a1f36]'
-              : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/10'
+              ? 'bg-[var(--ink)] text-[var(--paper)]'
+              : 'text-[var(--muted)] hover:text-[var(--ink)]'
           }`}
+          style={{ borderRadius: '2px' }}
         >
           Delay
         </button>
       </div>
 
       {/* Legend */}
-      <div className="absolute bottom-3 left-3 bg-white/95 dark:bg-[#1e2130]/95 backdrop-blur rounded-lg shadow-lg p-3 text-xs z-10 dark:text-gray-300">
-        <div className="font-semibold mb-2">
+      <div className="absolute bottom-3 left-3 bg-[var(--surface)]/95 backdrop-blur border border-[var(--border)] p-2.5 text-[10px] z-10 text-[var(--muted)]" style={{ borderRadius: '3px' }}>
+        <div className="font-semibold text-[var(--ink)] mb-1.5">
           {layerMode === 'income' ? 'Median Household Income' : 'Average Delay'}
         </div>
         <div className="flex items-center gap-1">
-          <span>{layerMode === 'income' ? '$30k' : '1.5 min'}</span>
-          <div className="flex h-3 rounded overflow-hidden">
+          <span>{layerMode === 'income' ? '$30k' : '1.5m'}</span>
+          <div className="flex h-2.5 overflow-hidden" style={{ borderRadius: '1px' }}>
             {['#7b3294', '#c2a5cf', '#f7f7f7', '#a6dba0', '#008837'].map((c) => (
-              <div key={c} className="w-6" style={{ background: c }} />
+              <div key={c} className="w-5" style={{ background: c }} />
             ))}
           </div>
-          <span>{layerMode === 'income' ? '$200k+' : '7+ min'}</span>
+          <span>{layerMode === 'income' ? '$200k+' : '7m+'}</span>
         </div>
-        <div className="mt-2 font-semibold">Route Performance</div>
-        <div className="flex items-center gap-3 mt-1">
-          <span className="flex items-center gap-1"><span className="w-4 h-0.5 bg-[#22c55e] inline-block" /> Good</span>
-          <span className="flex items-center gap-1"><span className="w-4 h-0.5 bg-[#eab308] inline-block" /> Fair</span>
-          <span className="flex items-center gap-1"><span className="w-4 h-0.5 bg-[#ef4444] inline-block" /> Poor</span>
+        <div className="flex items-center gap-2.5 mt-1.5">
+          <span className="flex items-center gap-1"><span className="w-3 h-[2px] bg-[#22c55e] inline-block" /> Good</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-[2px] bg-[#eab308] inline-block" /> Fair</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-[2px] bg-[#ef4444] inline-block" /> Poor</span>
         </div>
       </div>
     </div>

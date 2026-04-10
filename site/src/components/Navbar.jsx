@@ -2,67 +2,54 @@ import { NavLink } from 'react-router-dom'
 import { useTheme } from '../ThemeContext'
 
 const links = [
-  { to: '/', label: 'Home' },
-  { to: '/explorer', label: 'Route Explorer' },
+  { to: '/', label: 'Investigation' },
+  { to: '/live', label: 'Live', live: true },
+  { to: '/explorer', label: 'Explorer' },
   { to: '/rankings', label: 'Rankings' },
   { to: '/methodology', label: 'Methodology' },
 ]
-
-function SunIcon() {
-  return (
-    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-  )
-}
-
-function MoonIcon() {
-  return (
-    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>
-  )
-}
 
 export default function Navbar() {
   const { dark, toggle } = useTheme()
 
   return (
-    <nav className="bg-[#1a1f36] dark:bg-[#0d0f18] text-white sticky top-0 z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <NavLink to="/" className="flex items-center gap-2.5 no-underline">
-            <div className="w-8 h-8 bg-[#c41e3a] rounded-lg flex items-center justify-center text-sm font-bold">
-              SF
-            </div>
-            <span className="font-bold text-lg tracking-tight hidden sm:block">
-              Muni Equity Tracker
-            </span>
-          </NavLink>
-          <div className="flex items-center gap-1">
-            {links.map(({ to, label }) => (
-              <NavLink
-                key={to}
-                to={to}
-                className={({ isActive }) =>
-                  `px-3 py-2 rounded-lg text-sm font-medium transition-colors no-underline ${
-                    isActive
-                      ? 'bg-white/15 text-white'
-                      : 'text-white/70 hover:text-white hover:bg-white/10'
-                  }`
-                }
-              >
-                {label}
-              </NavLink>
-            ))}
-            <button
-              onClick={toggle}
-              className="ml-2 p-2 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-colors"
-              aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+    <nav className="border-b border-[var(--border)] bg-[var(--paper)] sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto px-5 flex items-center justify-between h-12">
+        <NavLink to="/" className="no-underline flex items-center gap-2">
+          <span className="text-[13px] font-bold tracking-tight text-[var(--ink)]" style={{ fontFamily: 'var(--font-serif)' }}>
+            SF Muni Equity Tracker
+          </span>
+        </NavLink>
+        <div className="flex items-center gap-0.5">
+          {links.map(({ to, label, live }) => (
+            <NavLink
+              key={to}
+              to={to}
+              className={({ isActive }) =>
+                `px-2.5 py-1 text-[12px] font-medium no-underline transition-colors flex items-center gap-1.5 ${
+                  isActive
+                    ? 'text-[var(--accent)]'
+                    : 'text-[var(--muted)] hover:text-[var(--ink)]'
+                }`
+              }
             >
-              {dark ? <SunIcon /> : <MoonIcon />}
-            </button>
-          </div>
+              {live && <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] pulse-dot" />}
+              {label}
+            </NavLink>
+          ))}
+          <button
+            onClick={toggle}
+            className="ml-2 p-1.5 text-[var(--muted)] hover:text-[var(--ink)] transition-colors"
+            aria-label={dark ? 'Light mode' : 'Dark mode'}
+          >
+            <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              {dark ? (
+                <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+              ) : (
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+              )}
+            </svg>
+          </button>
         </div>
       </div>
     </nav>

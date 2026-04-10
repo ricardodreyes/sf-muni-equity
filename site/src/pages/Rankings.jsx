@@ -2,12 +2,14 @@ import RankingsTable from '../components/RankingsTable'
 
 export default function Rankings() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div className="max-w-6xl mx-auto px-5 py-10 sm:py-14">
       <div className="mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-[#1a1f36] dark:text-white">Route Rankings</h1>
-        <p className="text-gray-500 dark:text-gray-400 mt-2">
-          All Muni routes ranked by on-time performance, with income context.
-          Click any column header to sort. Filter by route type or income quartile.
+        <h1 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[var(--ink)]" style={{ fontFamily: 'var(--font-serif)' }}>
+          Route Rankings
+        </h1>
+        <p className="mt-2 text-[14px] text-[var(--muted)] max-w-lg">
+          All {49} Muni routes ranked by on-time performance.
+          Click any column header to sort. Filter by type or income quartile.
         </p>
       </div>
       <RankingsTable />

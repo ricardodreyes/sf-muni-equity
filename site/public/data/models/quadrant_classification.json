@@ -1,0 +1,94 @@
+{
+  "income_threshold": 146123.0,
+  "delay_threshold": 1.6,
+  "quadrants": {
+    "Q1_equity_concern": {
+      "count": 16,
+      "routes": [
+        "SF:PH",
+        "SF:PM",
+        "SF:CA",
+        "SF:8BX",
+        "SF:56",
+        "SF:57",
+        "SF:12",
+        "SF:1",
+        "SF:N",
+        "SF:1X",
+        "SF:8",
+        "SF:90",
+        "SF:27",
+        "SF:19",
+        "SF:T",
+        "SF:91"
+      ]
+    },
+    "Q2_equity_success": {
+      "count": 18,
+      "routes": [
+        "SF:2",
+        "SF:15",
+        "SF:25",
+        "SF:5",
+        "SF:9R",
+        "SF:18",
+        "SF:54",
+        "SF:8AX",
+        "SF:31",
+        "SF:9",
+        "SF:44",
+        "SF:49",
+        "SF:29",
+        "SF:38",
+        "SF:5R",
+        "SF:58",
+        "SF:38R",
+        "SF:TBUS"
+      ]
+    },
+    "Q3_high_income_delayed": {
+      "count": 18,
+      "routes": [
+        "SF:67",
+        "SF:J",
+        "SF:K",
+        "SF:M",
+        "SF:L",
+        "SF:NOWL",
+        "SF:36",
+        "SF:14",
+        "SF:48",
+        "SF:39",
+        "SF:14R",
+        "SF:F",
+        "SF:55",
+        "SF:66",
+        "SF:22",
+        "SF:37",
+        "SF:NBUS",
+        "SF:35"
+      ]
+    },
+    "Q4_high_income_on_time": {
+      "count": 16,
+      "routes": [
+        "SF:FBUS",
+        "SF:28R",
+        "SF:6",
+        "SF:LOWL",
+        "SF:24",
+        "SF:52",
+        "SF:28",
+        "SF:7",
+        "SF:45",
+        "SF:43",
+        "SF:23",
+        "SF:714",
+        "SF:30",
+        "SF:33",
+        "SF:30X",
+        "SF:KBUS"
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "pearson_r": -0.2579,
+  "pearson_pvalue": 0.033714,
+  "spearman_rho": -0.0659,
+  "spearman_pvalue": 0.593169,
+  "mann_whitney_u": 178.0,
+  "mann_whitney_pvalue": 0.127736,
+  "kruskal_wallis_h": 3.39,
+  "kruskal_wallis_pvalue": 0.335679,
+  "q1_mean_delay": 3.79,
+  "q4_mean_delay": 1.45,
+  "delay_gap_pct": 162.2
+}

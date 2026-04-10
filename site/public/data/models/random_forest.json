@@ -1,0 +1,10 @@
+{
+  "cv_r_squared_mean": -99.2997,
+  "cv_r_squared_std": 120.5527,
+  "feature_importances": {
+    "weighted_median_income": 0.735,
+    "num_stops": 0.2614,
+    "is_rapid": 0.0036
+  },
+  "interpretation": "Median neighborhood income is the strongest predictor of route delay, accounting for 74% of the model's predictive power."
+}

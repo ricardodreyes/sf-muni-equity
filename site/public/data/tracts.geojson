@@ -3,1902 +3,4286 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075010100",
-        "name": "Pacific Heights",
-        "median_income": 215571,
-        "avg_delay_min": 3.6,
-        "num_routes": 8,
-        "population": 11015
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.447962,
-              37.798571
-            ],
-            [
-              -122.422922,
-              37.797071
-            ],
-            [
-              -122.424764,
-              37.785686
-            ],
-            [
-              -122.446022,
-              37.786668
-            ],
-            [
-              -122.447962,
-              37.798571
-            ]
-          ]
+          -122.402012,
+          37.775393
         ]
+      },
+      "properties": {
+        "name": "Census Tract 180; San Francisco County; California",
+        "median_income": 212439.0,
+        "avg_delay_min": 1.5,
+        "num_routes": 10,
+        "geoid": "06075018000",
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.481922,
+          37.752261
+        ]
+      },
       "properties": {
-        "geoid": "06075010200",
-        "name": "Marina District",
-        "median_income": 190059,
+        "name": "Census Tract 328.02; San Francisco County; California",
+        "median_income": 105195.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 6,
+        "geoid": "06075032802",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.48727,
+          37.785595
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 428; San Francisco County; California",
+        "median_income": 250001.0,
+        "avg_delay_min": 2.5,
+        "num_routes": 3,
+        "geoid": "06075042800",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.492676,
+          37.761663
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 327; San Francisco County; California",
+        "median_income": 128244.0,
+        "avg_delay_min": 1.6,
+        "num_routes": 4,
+        "geoid": "06075032700",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.49872,
+          37.761408
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 351.01; San Francisco County; California",
+        "median_income": 136176.0,
+        "avg_delay_min": 2.8,
+        "num_routes": 4,
+        "geoid": "06075035101",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.409151,
+          37.797009
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 107.01; San Francisco County; California",
+        "median_income": 24854.0,
+        "avg_delay_min": 3.2,
+        "num_routes": 9,
+        "geoid": "06075010701",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.419092,
+          37.788158
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 120.01; San Francisco County; California",
+        "median_income": 80300.0,
+        "avg_delay_min": 1.1,
+        "num_routes": 4,
+        "geoid": "06075012001",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.450119,
+          37.765323
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 171.02; San Francisco County; California",
+        "median_income": 173594.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 7,
+        "geoid": "06075017102",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.454166,
+          37.750126
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 305; San Francisco County; California",
+        "median_income": 177361.0,
+        "avg_delay_min": 1.7,
+        "num_routes": 9,
+        "geoid": "06075030500",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.436329,
+          37.774944
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 164; San Francisco County; California",
+        "median_income": 161612.0,
+        "avg_delay_min": 0.8,
+        "num_routes": 2,
+        "geoid": "06075016400",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.436227,
+          37.718417
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 260.04; San Francisco County; California",
+        "median_income": 146136.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 2,
+        "geoid": "06075026004",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.455597,
+          37.716335
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 314.02; San Francisco County; California",
+        "median_income": 155568.0,
+        "avg_delay_min": 1.1,
+        "num_routes": 2,
+        "geoid": "06075031402",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.466783,
+          37.739152
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 308; San Francisco County; California",
+        "median_income": 186667.0,
+        "avg_delay_min": 2.7,
+        "num_routes": 11,
+        "geoid": "06075030800",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.470442,
+          37.72976
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 309; San Francisco County; California",
+        "median_income": 235109.0,
+        "avg_delay_min": 2.2,
+        "num_routes": 10,
+        "geoid": "06075030900",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.480365,
+          37.762836
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 326.01; San Francisco County; California",
+        "median_income": 154444.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 8,
+        "geoid": "06075032601",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.414465,
+          37.791035
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 119.01; San Francisco County; California",
+        "median_income": 96518.0,
+        "avg_delay_min": 6.1,
+        "num_routes": 2,
+        "geoid": "06075011901",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.430044,
+          37.757624
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 206.02; San Francisco County; California",
+        "median_income": 207958.0,
         "avg_delay_min": 3.1,
-        "num_routes": 6,
-        "population": 9978
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.451665,
-              37.80503
-            ],
-            [
-              -122.421067,
-              37.804146
-            ],
-            [
-              -122.424431,
-              37.794604
-            ],
-            [
-              -122.450902,
-              37.795865
-            ],
-            [
-              -122.451665,
-              37.80503
-            ]
-          ]
-        ]
+        "num_routes": 2,
+        "geoid": "06075020602",
+        "population": 0
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075010300",
-        "name": "Cow Hollow",
-        "median_income": 199138,
-        "avg_delay_min": 2.9,
-        "num_routes": 5,
-        "population": 7642
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.450642,
-              37.801756
-            ],
-            [
-              -122.428358,
-              37.800602
-            ],
-            [
-              -122.431448,
-              37.7923
-            ],
-            [
-              -122.448495,
-              37.79361
-            ],
-            [
-              -122.450642,
-              37.801756
-            ]
-          ]
+          -122.411335,
+          37.800055
         ]
-      }
-    },
-    {
-      "type": "Feature",
+      },
       "properties": {
-        "geoid": "06075011100",
-        "name": "Russian Hill",
-        "median_income": 169194,
-        "avg_delay_min": 4.5,
+        "name": "Census Tract 107.02; San Francisco County; California",
+        "median_income": 84904.0,
+        "avg_delay_min": 3.4,
         "num_routes": 7,
-        "population": 10602
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.428377,
-              37.805992
-            ],
-            [
-              -122.410224,
-              37.804347
-            ],
-            [
-              -122.41284,
-              37.794011
-            ],
-            [
-              -122.427451,
-              37.795087
-            ],
-            [
-              -122.428377,
-              37.805992
-            ]
-          ]
-        ]
+        "geoid": "06075010702",
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.422273,
+          37.72766
+        ]
+      },
       "properties": {
-        "geoid": "06075011200",
-        "name": "Nob Hill",
-        "median_income": 141341,
-        "avg_delay_min": 4.3,
+        "name": "Census Tract 256; San Francisco County; California",
+        "median_income": 144100.0,
+        "avg_delay_min": 0.7,
+        "num_routes": 4,
+        "geoid": "06075025600",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.39433,
+          37.78732
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 615.06; San Francisco County; California",
+        "median_income": 250001.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 1,
+        "geoid": "06075061506",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.415615,
+          37.7869
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 122.04; San Francisco County; California",
+        "median_income": 64707.0,
+        "avg_delay_min": -0.8,
+        "num_routes": 3,
+        "geoid": "06075012204",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.455343,
+          37.721899
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 312.01; San Francisco County; California",
+        "median_income": 120962.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 6,
+        "geoid": "06075031201",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.420083,
+          37.771319
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 201.01; San Francisco County; California",
+        "median_income": 135759.0,
+        "avg_delay_min": 1.0,
         "num_routes": 9,
-        "population": 13113
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.42469,
-              37.798925
-            ],
-            [
-              -122.407744,
-              37.797496
-            ],
-            [
-              -122.408956,
-              37.787996
-            ],
-            [
-              -122.422148,
-              37.788374
-            ],
-            [
-              -122.42469,
-              37.798925
-            ]
-          ]
-        ]
+        "geoid": "06075020101",
+        "population": 0
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075011300",
-        "name": "Telegraph Hill",
-        "median_income": 160694,
-        "avg_delay_min": 4.2,
-        "num_routes": 4,
-        "population": 5763
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.41562,
-              37.806579
-            ],
-            [
-              -122.399532,
-              37.805873
-            ],
-            [
-              -122.400533,
-              37.797119
-            ],
-            [
-              -122.413518,
-              37.798353
-            ],
-            [
-              -122.41562,
-              37.806579
-            ]
-          ]
+          -122.401753,
+          37.767291
         ]
+      },
+      "properties": {
+        "name": "Census Tract 607.02; San Francisco County; California",
+        "median_income": 147903.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 3,
+        "geoid": "06075060702",
+        "population": 0
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075012400",
-        "name": "Tenderloin",
-        "median_income": 27640,
-        "avg_delay_min": 6.9,
-        "num_routes": 12,
-        "population": 28182
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.421396,
-              37.789473
-            ],
-            [
-              -122.403834,
-              37.788248
-            ],
-            [
-              -122.405068,
-              37.778758
-            ],
-            [
-              -122.420588,
-              37.779009
-            ],
-            [
-              -122.421396,
-              37.789473
-            ]
-          ]
+          -122.467955,
+          37.712223
         ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075012500",
-        "name": "SoMa West",
-        "median_income": 42473,
-        "avg_delay_min": 6.5,
-        "num_routes": 14,
-        "population": 18575
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.420014,
-              37.784181
-            ],
-            [
-              -122.399393,
-              37.783333
-            ],
-            [
-              -122.401232,
-              37.771167
-            ],
-            [
-              -122.418335,
-              37.772223
-            ],
-            [
-              -122.420014,
-              37.784181
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "properties": {
-        "geoid": "06075012600",
-        "name": "SoMa East",
-        "median_income": 47005,
-        "avg_delay_min": 5.8,
-        "num_routes": 11,
-        "population": 15257
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.409871,
-              37.785439
-            ],
-            [
-              -122.384796,
-              37.784322
-            ],
-            [
-              -122.385262,
-              37.774816
-            ],
-            [
-              -122.407927,
-              37.775335
-            ],
-            [
-              -122.409871,
-              37.785439
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075012700",
-        "name": "Civic Center",
-        "median_income": 33917,
-        "avg_delay_min": 6.8,
-        "num_routes": 13,
-        "population": 13098
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.426516,
-              37.783963
-            ],
-            [
-              -122.409134,
-              37.78253
-            ],
-            [
-              -122.410963,
-              37.774322
-            ],
-            [
-              -122.425004,
-              37.775752
-            ],
-            [
-              -122.426516,
-              37.783963
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075020100",
-        "name": "Inner Mission",
-        "median_income": 62773,
-        "avg_delay_min": 5.3,
-        "num_routes": 10,
-        "population": 22733
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.428023,
-              37.769316
-            ],
-            [
-              -122.406856,
-              37.768431
-            ],
-            [
-              -122.409981,
-              37.756694
-            ],
-            [
-              -122.426964,
-              37.757974
-            ],
-            [
-              -122.428023,
-              37.769316
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075020200",
-        "name": "Outer Mission",
-        "median_income": 57334,
-        "avg_delay_min": 6.3,
-        "num_routes": 8,
-        "population": 19834
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.433865,
-              37.752806
-            ],
-            [
-              -122.411744,
-              37.751219
-            ],
-            [
-              -122.41308,
-              37.73779
-            ],
-            [
-              -122.431468,
-              37.73873
-            ],
-            [
-              -122.433865,
-              37.752806
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075020300",
-        "name": "Mission Dolores",
-        "median_income": 84806,
-        "avg_delay_min": 5.1,
+        "name": "Census Tract 313.02; San Francisco County; California",
+        "median_income": 138000.0,
+        "avg_delay_min": 3.0,
         "num_routes": 7,
-        "population": 14216
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.436211,
-              37.772377
-            ],
-            [
-              -122.418437,
-              37.77179
-            ],
-            [
-              -122.420751,
-              37.761782
-            ],
-            [
-              -122.434481,
-              37.762058
-            ],
-            [
-              -122.436211,
-              37.772377
-            ]
-          ]
-        ]
+        "geoid": "06075031302",
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.392389,
+          37.74448
+        ]
+      },
       "properties": {
-        "geoid": "06075022100",
-        "name": "Castro",
-        "median_income": 130692,
-        "avg_delay_min": 4.6,
+        "name": "nan",
+        "median_income": null,
+        "avg_delay_min": 0,
+        "num_routes": 0,
+        "geoid": "06075980900",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.397341,
+          37.762477
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 227.02; San Francisco County; California",
+        "median_income": 250001.0,
+        "avg_delay_min": 2.0,
+        "num_routes": 1,
+        "geoid": "06075022702",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.492468,
+          37.776599
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 478.01; San Francisco County; California",
+        "median_income": 172375.0,
+        "avg_delay_min": 1.2,
         "num_routes": 6,
-        "population": 11604
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.443528,
-              37.767769
-            ],
-            [
-              -122.425878,
-              37.766679
-            ],
-            [
-              -122.427784,
-              37.756606
-            ],
-            [
-              -122.442754,
-              37.757931
-            ],
-            [
-              -122.443528,
-              37.767769
-            ]
-          ]
-        ]
+        "geoid": "06075047801",
+        "population": 0
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075022200",
-        "name": "Noe Valley",
-        "median_income": 141489,
-        "avg_delay_min": 4.2,
-        "num_routes": 5,
-        "population": 13226
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.445411,
-              37.756623
-            ],
-            [
-              -122.423537,
-              37.755129
-            ],
-            [
-              -122.425583,
-              37.743016
-            ],
-            [
-              -122.443507,
-              37.74486
-            ],
-            [
-              -122.445411,
-              37.756623
-            ]
-          ]
+          -122.39716,
+          37.78479
         ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075022300",
-        "name": "Eureka Valley",
-        "median_income": 132075,
-        "avg_delay_min": 4.6,
-        "num_routes": 4,
-        "population": 8113
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.445902,
-              37.762531
-            ],
-            [
-              -122.429551,
-              37.761658
-            ],
-            [
-              -122.432818,
-              37.753465
-            ],
-            [
-              -122.444742,
-              37.7542
-            ],
-            [
-              -122.445902,
-              37.762531
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "properties": {
-        "geoid": "06075026100",
-        "name": "Bayview",
-        "median_income": 40667,
-        "avg_delay_min": 6.3,
-        "num_routes": 6,
-        "population": 17849
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.402706,
-              37.742189
-            ],
-            [
-              -122.37794,
-              37.741768
-            ],
-            [
-              -122.378344,
-              37.725248
-            ],
-            [
-              -122.400049,
-              37.726542
-            ],
-            [
-              -122.402706,
-              37.742189
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075026200",
-        "name": "Hunters Point",
-        "median_income": 35635,
-        "avg_delay_min": 5.9,
-        "num_routes": 4,
-        "population": 12210
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.393409,
-              37.733651
-            ],
-            [
-              -122.371111,
-              37.7329
-            ],
-            [
-              -122.373002,
-              37.718531
-            ],
-            [
-              -122.391596,
-              37.719807
-            ],
-            [
-              -122.393409,
-              37.733651
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075026300",
-        "name": "India Basin",
-        "median_income": 52608,
-        "avg_delay_min": 6.6,
-        "num_routes": 3,
-        "population": 8870
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.3866,
-              37.743826
-            ],
-            [
-              -122.36927,
-              37.742907
-            ],
-            [
-              -122.371496,
-              37.732758
-            ],
-            [
-              -122.385295,
-              37.733716
-            ],
-            [
-              -122.3866,
-              37.743826
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075030100",
-        "name": "Inner Sunset",
-        "median_income": 107050,
-        "avg_delay_min": 5.2,
-        "num_routes": 6,
-        "population": 16097
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.480593,
-              37.76792
-            ],
-            [
-              -122.454993,
-              37.766661
-            ],
-            [
-              -122.456408,
-              37.756602
-            ],
-            [
-              -122.47921,
-              37.757861
-            ],
-            [
-              -122.480593,
-              37.76792
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075030200",
-        "name": "Central Sunset",
-        "median_income": 93291,
-        "avg_delay_min": 5.3,
-        "num_routes": 4,
-        "population": 18759
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.499084,
-              37.761427
-            ],
-            [
-              -122.47036,
-              37.760042
-            ],
-            [
-              -122.47126,
-              37.748214
-            ],
-            [
-              -122.4988,
-              37.749481
-            ],
-            [
-              -122.499084,
-              37.761427
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075030300",
-        "name": "Outer Sunset",
-        "median_income": 90397,
-        "avg_delay_min": 5.9,
-        "num_routes": 3,
-        "population": 15699
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.514449,
-              37.759276
-            ],
-            [
-              -122.488295,
-              37.758996
-            ],
-            [
-              -122.490402,
-              37.746815
-            ],
-            [
-              -122.512157,
-              37.747716
-            ],
-            [
-              -122.514449,
-              37.759276
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075030400",
-        "name": "Parkside",
-        "median_income": 95180,
-        "avg_delay_min": 5,
-        "num_routes": 4,
-        "population": 14272
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.496404,
-              37.749969
-            ],
-            [
-              -122.469593,
-              37.748521
-            ],
-            [
-              -122.471775,
-              37.736171
-            ],
-            [
-              -122.493914,
-              37.737896
-            ],
-            [
-              -122.496404,
-              37.749969
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075035100",
-        "name": "Excelsior",
-        "median_income": 67917,
-        "avg_delay_min": 6.3,
-        "num_routes": 5,
-        "population": 21592
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.436162,
-              37.732839
-            ],
-            [
-              -122.414921,
-              37.731381
-            ],
-            [
-              -122.41616,
-              37.719881
-            ],
-            [
-              -122.434137,
-              37.720482
-            ],
-            [
-              -122.436162,
-              37.732839
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075035200",
-        "name": "Visitacion Valley",
-        "median_income": 58031,
-        "avg_delay_min": 6,
-        "num_routes": 4,
-        "population": 16620
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.416143,
-              37.723897
-            ],
-            [
-              -122.393756,
-              37.7224
-            ],
-            [
-              -122.396733,
-              37.710941
-            ],
-            [
-              -122.413715,
-              37.711739
-            ],
-            [
-              -122.416143,
-              37.723897
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075035300",
-        "name": "Crocker-Amazon",
-        "median_income": 73744,
-        "avg_delay_min": 6.1,
-        "num_routes": 3,
-        "population": 12287
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.449969,
-              37.725064
-            ],
-            [
-              -122.431096,
-              37.724932
-            ],
-            [
-              -122.433213,
-              37.714235
-            ],
-            [
-              -122.446749,
-              37.715356
-            ],
-            [
-              -122.449969,
-              37.725064
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075061100",
-        "name": "Financial District",
-        "median_income": 119943,
-        "avg_delay_min": 4.9,
-        "num_routes": 10,
-        "population": 8401
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.408661,
-              37.799431
-            ],
-            [
-              -122.391074,
-              37.7988
-            ],
-            [
-              -122.393783,
-              37.788428
-            ],
-            [
-              -122.407468,
-              37.789189
-            ],
-            [
-              -122.408661,
-              37.799431
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075061200",
-        "name": "Downtown",
-        "median_income": 96811,
-        "avg_delay_min": 5.6,
-        "num_routes": 12,
-        "population": 9716
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.413026,
-              37.793373
-            ],
-            [
-              -122.396326,
-              37.792687
-            ],
-            [
-              -122.398925,
-              37.784716
-            ],
-            [
-              -122.412782,
-              37.785699
-            ],
-            [
-              -122.413026,
-              37.793373
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075061300",
-        "name": "Union Square",
-        "median_income": 107980,
-        "avg_delay_min": 4.9,
-        "num_routes": 11,
-        "population": 6869
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.415193,
-              37.791853
-            ],
-            [
-              -122.4025,
-              37.790654
-            ],
-            [
-              -122.404815,
-              37.784689
-            ],
-            [
-              -122.413984,
-              37.785679
-            ],
-            [
-              -122.415193,
-              37.791853
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075015100",
-        "name": "Haight-Ashbury",
-        "median_income": 92136,
-        "avg_delay_min": 4.9,
-        "num_routes": 5,
-        "population": 11728
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.4616,
-              37.775197
-            ],
-            [
-              -122.43886,
-              37.774734
-            ],
-            [
-              -122.441957,
-              37.764066
-            ],
-            [
-              -122.45906,
-              37.765408
-            ],
-            [
-              -122.4616,
-              37.775197
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075015200",
-        "name": "Cole Valley",
-        "median_income": 111057,
-        "avg_delay_min": 5.1,
-        "num_routes": 4,
-        "population": 7864
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.462647,
-              37.770996
-            ],
-            [
-              -122.444691,
-              37.769119
-            ],
-            [
-              -122.445309,
-              37.761901
-            ],
-            [
-              -122.459626,
-              37.762173
-            ],
-            [
-              -122.462647,
-              37.770996
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075013100",
-        "name": "Western Addition",
-        "median_income": 53849,
-        "avg_delay_min": 6.3,
-        "num_routes": 9,
-        "population": 16382
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.443857,
-              37.787894
-            ],
-            [
-              -122.420093,
-              37.786266
-            ],
-            [
-              -122.423629,
-              37.776035
-            ],
-            [
-              -122.440958,
-              37.777495
-            ],
-            [
-              -122.443857,
-              37.787894
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "geoid": "06075013200",
-        "name": "Fillmore",
-        "median_income": 46791,
-        "avg_delay_min": 6.2,
+        "name": "Census Tract 615.03; San Francisco County; California",
+        "median_income": 188441.0,
+        "avg_delay_min": 0.5,
         "num_routes": 8,
-        "population": 13736
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.443874,
-              37.789706
-            ],
-            [
-              -122.425932,
-              37.788153
-            ],
-            [
-              -122.428862,
-              37.780526
-            ],
-            [
-              -122.44223,
-              37.781539
-            ],
-            [
-              -122.443874,
-              37.789706
-            ]
-          ]
-        ]
+        "geoid": "06075061503",
+        "population": 0
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075013300",
-        "name": "Japantown",
-        "median_income": 69493,
-        "avg_delay_min": 5.4,
-        "num_routes": 7,
-        "population": 5788
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.437171,
-              37.78885
-            ],
-            [
-              -122.423101,
-              37.78798
-            ],
-            [
-              -122.425256,
-              37.781468
-            ],
-            [
-              -122.434207,
-              37.782925
-            ],
-            [
-              -122.437171,
-              37.78885
-            ]
-          ]
+          -122.399393,
+          37.711922
         ]
-      }
-    },
-    {
-      "type": "Feature",
+      },
       "properties": {
-        "geoid": "06075010700",
-        "name": "Chinatown",
-        "median_income": 32360,
-        "avg_delay_min": 7,
+        "name": "Census Tract 610; San Francisco County; California",
+        "median_income": 155968.0,
+        "avg_delay_min": 2.4,
         "num_routes": 8,
-        "population": 15806
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.4147,
-              37.799798
-            ],
-            [
-              -122.399221,
-              37.798863
-            ],
-            [
-              -122.402071,
-              37.790064
-            ],
-            [
-              -122.412635,
-              37.791631
-            ],
-            [
-              -122.4147,
-              37.799798
-            ]
-          ]
-        ]
+        "geoid": "06075061000",
+        "population": 0
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075010800",
-        "name": "North Beach",
-        "median_income": 61209,
-        "avg_delay_min": 6.1,
-        "num_routes": 6,
-        "population": 10350
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.419894,
-              37.804224
-            ],
-            [
-              -122.401228,
-              37.803184
-            ],
-            [
-              -122.403888,
-              37.795828
-            ],
-            [
-              -122.417262,
-              37.796705
-            ],
-            [
-              -122.419894,
-              37.804224
-            ]
-          ]
+          -122.457374,
+          37.77812
         ]
-      }
-    },
-    {
-      "type": "Feature",
+      },
       "properties": {
-        "geoid": "06075022700",
-        "name": "Potrero Hill",
-        "median_income": 129506,
-        "avg_delay_min": 4.6,
+        "name": "Census Tract 156; San Francisco County; California",
+        "median_income": 92963.0,
+        "avg_delay_min": 1.2,
         "num_routes": 5,
-        "population": 12128
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.409201,
-              37.766939
-            ],
-            [
-              -122.390793,
-              37.765391
-            ],
-            [
-              -122.393283,
-              37.753962
-            ],
-            [
-              -122.406843,
-              37.754065
-            ],
-            [
-              -122.409201,
-              37.766939
-            ]
-          ]
-        ]
+        "geoid": "06075015600",
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.425874,
+          37.725862
+        ]
+      },
       "properties": {
-        "geoid": "06075022800",
-        "name": "Dogpatch",
-        "median_income": 110903,
-        "avg_delay_min": 4.3,
+        "name": "Census Tract 260.02; San Francisco County; California",
+        "median_income": 127768.0,
+        "avg_delay_min": 0.2,
+        "num_routes": 2,
+        "geoid": "06075026002",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.413412,
+          37.743559
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 252; San Francisco County; California",
+        "median_income": 197853.0,
+        "avg_delay_min": 2.4,
         "num_routes": 4,
-        "population": 8537
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.398883,
-              37.763819
-            ],
-            [
-              -122.381609,
-              37.76269
-            ],
-            [
-              -122.383155,
-              37.752675
-            ],
-            [
-              -122.396906,
-              37.753624
-            ],
-            [
-              -122.398883,
-              37.763819
-            ]
-          ]
-        ]
+        "geoid": "06075025200",
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.44684,
+          37.730539
+        ]
+      },
       "properties": {
+        "name": "Census Tract 311; San Francisco County; California",
+        "median_income": 200545.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 6,
         "geoid": "06075031100",
-        "name": "Twin Peaks",
-        "median_income": 129278,
-        "avg_delay_min": 4.2,
-        "num_routes": 3,
-        "population": 6333
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.456725,
-              37.758201
-            ],
-            [
-              -122.439688,
-              37.757134
-            ],
-            [
-              -122.440016,
-              37.747141
-            ],
-            [
-              -122.454415,
-              37.748633
-            ],
-            [
-              -122.456725,
-              37.758201
-            ]
-          ]
-        ]
+        "population": 0
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075031200",
-        "name": "Diamond Heights",
-        "median_income": 116489,
-        "avg_delay_min": 5.3,
-        "num_routes": 3,
-        "population": 7376
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.451137,
-              37.750232
-            ],
-            [
-              -122.433992,
-              37.749703
-            ],
-            [
-              -122.435628,
-              37.739886
-            ],
-            [
-              -122.449311,
-              37.740435
-            ],
-            [
-              -122.451137,
-              37.750232
-            ]
-          ]
+          -122.436206,
+          37.793331
         ]
+      },
+      "properties": {
+        "name": "Census Tract 132; San Francisco County; California",
+        "median_income": 164375.0,
+        "avg_delay_min": 1.8,
+        "num_routes": 2,
+        "geoid": "06075013200",
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.396909,
+          37.796835
+        ]
+      },
       "properties": {
-        "geoid": "06075031300",
-        "name": "Glen Park",
-        "median_income": 132473,
-        "avg_delay_min": 4.4,
+        "name": "Census Tract 105; San Francisco County; California",
+        "median_income": 179896.0,
+        "avg_delay_min": 2.6,
+        "num_routes": 12,
+        "geoid": "06075010500",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.412399,
+          37.792984
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 112; San Francisco County; California",
+        "median_income": 121855.0,
+        "avg_delay_min": 8.2,
         "num_routes": 5,
-        "population": 9913
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.444933,
-              37.743865
-            ],
-            [
-              -122.426981,
-              37.742323
-            ],
-            [
-              -122.42773,
-              37.732143
-            ],
-            [
-              -122.442457,
-              37.733353
-            ],
-            [
-              -122.444933,
-              37.743865
-            ]
-          ]
-        ]
+        "geoid": "06075011200",
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.402455,
+          37.794822
+        ]
+      },
       "properties": {
-        "geoid": "06075040100",
-        "name": "Inner Richmond",
-        "median_income": 89683,
-        "avg_delay_min": 5.9,
+        "name": "Census Tract 611.01; San Francisco County; California",
+        "median_income": 24167.0,
+        "avg_delay_min": 2.2,
+        "num_routes": 7,
+        "geoid": "06075061101",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.414355,
+          37.801535
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 103; San Francisco County; California",
+        "median_income": 158144.0,
+        "avg_delay_min": 3.1,
+        "num_routes": 4,
+        "geoid": "06075010300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.48001,
+          37.720175
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 332.04; San Francisco County; California",
+        "median_income": 58114.0,
+        "avg_delay_min": 2.8,
+        "num_routes": 2,
+        "geoid": "06075033204",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4447,
+          37.71073
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 263.03; San Francisco County; California",
+        "median_income": 96146.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 3,
+        "geoid": "06075026303",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.416792,
+          37.782653
+        ]
+      },
+      "properties": {
+        "name": "nan",
+        "median_income": null,
+        "avg_delay_min": 0,
+        "num_routes": 0,
+        "geoid": "06075012403",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.452447,
+          37.720201
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 312.02; San Francisco County; California",
+        "median_income": 181875.0,
+        "avg_delay_min": 0.8,
+        "num_routes": 8,
+        "geoid": "06075031202",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.407243,
+          37.783565
+        ]
+      },
+      "properties": {
+        "name": "nan",
+        "median_income": null,
+        "avg_delay_min": 0,
+        "num_routes": 0,
+        "geoid": "06075017602",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.436989,
+          37.73982
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 217; San Francisco County; California",
+        "median_income": 133300.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 5,
+        "geoid": "06075021700",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.491095,
+          37.721126
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 604; San Francisco County; California",
+        "median_income": 77045.0,
+        "avg_delay_min": -0.0,
         "num_routes": 6,
-        "population": 16543
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.475289,
-              37.787036
-            ],
-            [
-              -122.448175,
-              37.786035
-            ],
-            [
-              -122.450956,
-              37.776507
-            ],
-            [
-              -122.473035,
-              37.777077
-            ],
-            [
-              -122.475289,
-              37.787036
-            ]
-          ]
-        ]
+        "geoid": "06075060400",
+        "population": 0
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075040200",
-        "name": "Central Richmond",
-        "median_income": 92365,
-        "avg_delay_min": 5.5,
-        "num_routes": 4,
-        "population": 15187
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.491117,
-              37.785371
-            ],
-            [
-              -122.465716,
-              37.784779
-            ],
-            [
-              -122.466619,
-              37.774125
-            ],
-            [
-              -122.489166,
-              37.775956
-            ],
-            [
-              -122.491117,
-              37.785371
-            ]
-          ]
+          -122.411618,
+          37.773297
         ]
+      },
+      "properties": {
+        "name": "Census Tract 178.03; San Francisco County; California",
+        "median_income": 85909.0,
+        "avg_delay_min": 2.0,
+        "num_routes": 6,
+        "geoid": "06075017803",
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.439805,
+          37.765247
+        ]
+      },
       "properties": {
-        "geoid": "06075040300",
-        "name": "Outer Richmond",
-        "median_income": 102663,
-        "avg_delay_min": 5,
+        "name": "Census Tract 170; San Francisco County; California",
+        "median_income": 229013.0,
+        "avg_delay_min": 1.4,
+        "num_routes": 2,
+        "geoid": "06075017000",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.431904,
+          37.767302
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 169; San Francisco County; California",
+        "median_income": 201827.0,
+        "avg_delay_min": 2.3,
+        "num_routes": 14,
+        "geoid": "06075016900",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.388883,
+          37.760103
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 226; San Francisco County; California",
+        "median_income": 232036.0,
+        "avg_delay_min": 2.0,
+        "num_routes": 7,
+        "geoid": "06075022600",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.446528,
+          37.765356
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 171.01; San Francisco County; California",
+        "median_income": 201944.0,
+        "avg_delay_min": 0.4,
         "num_routes": 3,
-        "population": 14042
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.510718,
-              37.783784
-            ],
-            [
-              -122.483151,
-              37.782892
-            ],
-            [
-              -122.485688,
-              37.772134
-            ],
-            [
-              -122.507616,
-              37.773648
-            ],
-            [
-              -122.510718,
-              37.783784
-            ]
-          ]
-        ]
+        "geoid": "06075017101",
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.443719,
+          37.759755
+        ]
+      },
       "properties": {
+        "name": "Census Tract 204.01; San Francisco County; California",
+        "median_income": 196667.0,
+        "avg_delay_min": 0.7,
+        "num_routes": 4,
+        "geoid": "06075020401",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.393304,
+          37.757312
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 614.02; San Francisco County; California",
+        "median_income": 226290.0,
+        "avg_delay_min": 1.8,
+        "num_routes": 2,
+        "geoid": "06075061402",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.414287,
+          37.750993
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 229.01; San Francisco County; California",
+        "median_income": 101617.0,
+        "avg_delay_min": 3.2,
+        "num_routes": 4,
+        "geoid": "06075022901",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.421236,
+          37.743206
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 253; San Francisco County; California",
+        "median_income": 181578.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 7,
+        "geoid": "06075025300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.50362,
+          37.779836
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 479.02; San Francisco County; California",
+        "median_income": 125750.0,
+        "avg_delay_min": -0.3,
+        "num_routes": 2,
+        "geoid": "06075047902",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.506605,
+          37.761326
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 352.02; San Francisco County; California",
+        "median_income": 104877.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 4,
+        "geoid": "06075035202",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.461261,
+          37.784294
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 401; San Francisco County; California",
+        "median_income": 175144.0,
+        "avg_delay_min": 1.8,
+        "num_routes": 4,
+        "geoid": "06075040100",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41284,
+          37.780927
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 125.04; San Francisco County; California",
+        "median_income": 19333.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 3,
+        "geoid": "06075012504",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.418471,
+          37.734526
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 254.03; San Francisco County; California",
+        "median_income": 147083.0,
+        "avg_delay_min": 2.0,
+        "num_routes": 5,
+        "geoid": "06075025403",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.470149,
+          37.776549
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 452.01; San Francisco County; California",
+        "median_income": 166944.0,
+        "avg_delay_min": 0.8,
+        "num_routes": 8,
+        "geoid": "06075045201",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.449493,
+          37.78805
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 133; San Francisco County; California",
+        "median_income": 176250.0,
+        "avg_delay_min": 1.6,
+        "num_routes": 5,
+        "geoid": "06075013300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.409477,
+          37.794258
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 113; San Francisco County; California",
+        "median_income": 32623.0,
+        "avg_delay_min": 7.1,
+        "num_routes": 13,
+        "geoid": "06075011300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.432889,
+          37.790322
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 135; San Francisco County; California",
+        "median_income": 179194.0,
+        "avg_delay_min": 2.1,
+        "num_routes": 3,
+        "geoid": "06075013500",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.444731,
+          37.779134
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 157.02; San Francisco County; California",
+        "median_income": 216071.0,
+        "avg_delay_min": 0.9,
+        "num_routes": 6,
+        "geoid": "06075015702",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.497967,
+          37.753767
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 351.02; San Francisco County; California",
+        "median_income": 167279.0,
+        "avg_delay_min": 0.5,
+        "num_routes": 2,
+        "geoid": "06075035102",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.393413,
+          37.791664
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 615.07; San Francisco County; California",
+        "median_income": 118661.0,
+        "avg_delay_min": 3.6,
+        "num_routes": 18,
+        "geoid": "06075061507",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.399847,
+          37.788901
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 615.01; San Francisco County; California",
+        "median_income": 229363.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 31,
+        "geoid": "06075061501",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.469903,
+          37.747412
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 304; San Francisco County; California",
+        "median_income": 137448.0,
+        "avg_delay_min": 2.0,
+        "num_routes": 14,
+        "geoid": "06075030400",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.419982,
+          37.76501
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 201.02; San Francisco County; California",
+        "median_income": 100761.0,
+        "avg_delay_min": 0.9,
+        "num_routes": 7,
+        "geoid": "06075020102",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.480031,
+          37.747086
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 328.01; San Francisco County; California",
+        "median_income": 154257.0,
+        "avg_delay_min": 2.2,
+        "num_routes": 7,
+        "geoid": "06075032801",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.407166,
+          37.710838
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 264.03; San Francisco County; California",
+        "median_income": 75156.0,
+        "avg_delay_min": 1.6,
+        "num_routes": 9,
+        "geoid": "06075026403",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.406566,
+          37.793566
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 118; San Francisco County; California",
+        "median_income": 43487.0,
+        "avg_delay_min": 1.7,
+        "num_routes": 5,
+        "geoid": "06075011800",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.49848,
+          37.783024
+        ]
+      },
+      "properties": {
+        "name": "nan",
+        "median_income": null,
+        "avg_delay_min": 0,
+        "num_routes": 0,
+        "geoid": "06075980200",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4198,
+          37.78303
+        ]
+      },
+      "properties": {
+        "name": "nan",
+        "median_income": null,
+        "avg_delay_min": 0,
+        "num_routes": 0,
+        "geoid": "06075012406",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40891,
+          37.722548
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 259; San Francisco County; California",
+        "median_income": 175524.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 4,
+        "geoid": "06075025900",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.430486,
+          37.775976
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 163; San Francisco County; California",
+        "median_income": 135658.0,
+        "avg_delay_min": 1.5,
+        "num_routes": 2,
+        "geoid": "06075016300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.454733,
+          37.744243
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 306; San Francisco County; California",
+        "median_income": 247500.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 7,
+        "geoid": "06075030600",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.450617,
+          37.778537
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 157.01; San Francisco County; California",
+        "median_income": 182353.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 5,
+        "geoid": "06075015701",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.446919,
+          37.77457
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 165; San Francisco County; California",
+        "median_income": 153096.0,
+        "avg_delay_min": 0.5,
+        "num_routes": 5,
+        "geoid": "06075016500",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.401267,
+          37.72166
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 258; San Francisco County; California",
+        "median_income": 82188.0,
+        "avg_delay_min": 0.7,
+        "num_routes": 6,
+        "geoid": "06075025800",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.425263,
+          37.770437
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 202.02; San Francisco County; California",
+        "median_income": 166985.0,
+        "avg_delay_min": 1.5,
+        "num_routes": 6,
+        "geoid": "06075020202",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.420055,
+          37.787345
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 120.02; San Francisco County; California",
+        "median_income": 72549.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 1,
+        "geoid": "06075012002",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.424175,
+          37.76473
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 202.01; San Francisco County; California",
+        "median_income": 94265.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 1,
+        "geoid": "06075020201",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.419935,
+          37.76199
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 208.02; San Francisco County; California",
+        "median_income": 119667.0,
+        "avg_delay_min": 0.4,
+        "num_routes": 3,
+        "geoid": "06075020802",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.479059,
+          37.740523
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 330.02; San Francisco County; California",
+        "median_income": 181000.0,
+        "avg_delay_min": 1.5,
+        "num_routes": 7,
+        "geoid": "06075033002",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.394695,
+          37.78047
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 615.02; San Francisco County; California",
+        "median_income": 122422.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 8,
+        "geoid": "06075061502",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400914,
+          37.781766
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 178.01; San Francisco County; California",
+        "median_income": 28408.0,
+        "avg_delay_min": 2.4,
+        "num_routes": 9,
+        "geoid": "06075017801",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.411366,
+          37.73128
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 257.01; San Francisco County; California",
+        "median_income": 130538.0,
+        "avg_delay_min": 0.3,
+        "num_routes": 3,
+        "geoid": "06075025701",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.468057,
+          37.719898
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 313.01; San Francisco County; California",
+        "median_income": 147938.0,
+        "avg_delay_min": -0.4,
+        "num_routes": 1,
+        "geoid": "06075031301",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.457401,
+          37.729671
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 310; San Francisco County; California",
+        "median_income": 206130.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 8,
+        "geoid": "06075031000",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.370477,
+          37.728903
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 9806; San Francisco County; California",
+        "median_income": 154375.0,
+        "avg_delay_min": 2.6,
+        "num_routes": 2,
+        "geoid": "06075980600",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.430559,
+          37.7832
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 159; San Francisco County; California",
+        "median_income": 83866.0,
+        "avg_delay_min": 0.4,
+        "num_routes": 4,
+        "geoid": "06075015900",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41912,
+          37.79364
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 110.01; San Francisco County; California",
+        "median_income": 129423.0,
+        "avg_delay_min": 6.3,
+        "num_routes": 3,
+        "geoid": "06075011001",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.408113,
+          37.79535
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 611.02; San Francisco County; California",
+        "median_income": 28958.0,
+        "avg_delay_min": -0.4,
+        "num_routes": 4,
+        "geoid": "06075061102",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.42668,
+          37.798224
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 130.01; San Francisco County; California",
+        "median_income": 154659.0,
+        "avg_delay_min": 0.8,
+        "num_routes": 1,
+        "geoid": "06075013001",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.413643,
+          37.769319
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 177; San Francisco County; California",
+        "median_income": 124679.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 23,
+        "geoid": "06075017700",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.390051,
+          37.772487
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 607.01; San Francisco County; California",
+        "median_income": 231225.0,
+        "avg_delay_min": 2.1,
+        "num_routes": 8,
+        "geoid": "06075060701",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.42177,
+          37.751525
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 210; San Francisco County; California",
+        "median_income": 178558.0,
+        "avg_delay_min": 1.6,
+        "num_routes": 2,
+        "geoid": "06075021000",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.457402,
+          37.712754
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 314.01; San Francisco County; California",
+        "median_income": 99500.0,
+        "avg_delay_min": 2.7,
+        "num_routes": 2,
+        "geoid": "06075031401",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.488017,
+          37.737456
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 330.01; San Francisco County; California",
+        "median_income": 183021.0,
+        "avg_delay_min": 0.9,
+        "num_routes": 6,
+        "geoid": "06075033001",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.395644,
+          37.732014
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 230.03; San Francisco County; California",
+        "median_income": 102137.0,
+        "avg_delay_min": 0.6,
+        "num_routes": 6,
+        "geoid": "06075023003",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.384391,
+          37.733379
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 231.02; San Francisco County; California",
+        "median_income": 43882.0,
+        "avg_delay_min": 0.6,
+        "num_routes": 4,
+        "geoid": "06075023102",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.479971,
+          37.769118
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 9803; San Francisco County; California",
+        "median_income": 107188.0,
+        "avg_delay_min": 0.9,
+        "num_routes": 10,
+        "geoid": "06075980300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.434431,
+          37.797105
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 130.02; San Francisco County; California",
+        "median_income": 244215.0,
+        "avg_delay_min": 1.7,
+        "num_routes": 2,
+        "geoid": "06075013002",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.424117,
+          37.77746
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 162; San Francisco County; California",
+        "median_income": 102035.0,
+        "avg_delay_min": 0.7,
+        "num_routes": 2,
+        "geoid": "06075016200",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.420132,
+          37.795047
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 110.02; San Francisco County; California",
+        "median_income": 157980.0,
+        "avg_delay_min": 4.9,
+        "num_routes": 6,
+        "geoid": "06075011002",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4136,
+          37.79609
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 108; San Francisco County; California",
+        "median_income": 123750.0,
+        "avg_delay_min": 8.9,
+        "num_routes": 4,
+        "geoid": "06075010800",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41894,
+          37.7577
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 208.01; San Francisco County; California",
+        "median_income": 133953.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 3,
+        "geoid": "06075020801",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.49239,
+          37.753388
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 329.02; San Francisco County; California",
+        "median_income": 126471.0,
+        "avg_delay_min": 0.7,
+        "num_routes": 2,
+        "geoid": "06075032902",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.444395,
+          37.751149
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 204.02; San Francisco County; California",
+        "median_income": 152097.0,
+        "avg_delay_min": 2.3,
+        "num_routes": 3,
+        "geoid": "06075020402",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400025,
+          37.752976
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 614.01; San Francisco County; California",
+        "median_income": 148598.0,
+        "avg_delay_min": 1.8,
+        "num_routes": 2,
+        "geoid": "06075061401",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.430464,
+          37.760835
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 206.01; San Francisco County; California",
+        "median_income": 235568.0,
+        "avg_delay_min": 1.6,
+        "num_routes": 3,
+        "geoid": "06075020601",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.481533,
+          37.759349
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 326.02; San Francisco County; California",
+        "median_income": 163796.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 7,
+        "geoid": "06075032602",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40717,
+          37.752635
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 229.03; San Francisco County; California",
+        "median_income": 189875.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 6,
+        "geoid": "06075022903",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.430055,
+          37.753289
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 211; San Francisco County; California",
+        "median_income": 250001.0,
+        "avg_delay_min": 2.2,
+        "num_routes": 3,
+        "geoid": "06075021100",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.494716,
+          37.778495
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 478.02; San Francisco County; California",
+        "median_income": 129415.0,
+        "avg_delay_min": -0.0,
+        "num_routes": 7,
+        "geoid": "06075047802",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.505422,
+          37.753425
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 352.01; San Francisco County; California",
+        "median_income": 136295.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 2,
+        "geoid": "06075035201",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.465312,
+          37.776247
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 452.02; San Francisco County; California",
+        "median_income": 133977.0,
+        "avg_delay_min": 0.4,
+        "num_routes": 5,
+        "geoid": "06075045202",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.461611,
+          37.777932
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 451; San Francisco County; California",
+        "median_income": 211111.0,
+        "avg_delay_min": 0.7,
+        "num_routes": 7,
+        "geoid": "06075045100",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40505,
+          37.72794
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 257.02; San Francisco County; California",
+        "median_income": 125473.0,
+        "avg_delay_min": 0.4,
+        "num_routes": 8,
+        "geoid": "06075025702",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.433015,
+          37.723498
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 260.01; San Francisco County; California",
+        "median_income": 120650.0,
+        "avg_delay_min": 0.8,
+        "num_routes": 5,
+        "geoid": "06075026001",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.406514,
+          37.798969
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 106; San Francisco County; California",
+        "median_income": 75938.0,
+        "avg_delay_min": 2.5,
+        "num_routes": 8,
+        "geoid": "06075010600",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.440242,
+          37.786635
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 153; San Francisco County; California",
+        "median_income": 214688.0,
+        "avg_delay_min": 1.4,
+        "num_routes": 3,
+        "geoid": "06075015300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.426932,
+          37.801695
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 129.01; San Francisco County; California",
+        "median_income": 219125.0,
+        "avg_delay_min": 0.2,
+        "num_routes": 6,
+        "geoid": "06075012901",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.401626,
+          37.760883
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 227.04; San Francisco County; California",
+        "median_income": 250001.0,
+        "avg_delay_min": 2.0,
+        "num_routes": 1,
+        "geoid": "06075022704",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.433305,
+          37.785455
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 155; San Francisco County; California",
+        "median_income": 95841.0,
+        "avg_delay_min": 0.5,
+        "num_routes": 5,
+        "geoid": "06075015500",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.378736,
+          37.732146
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 231.03; San Francisco County; California",
+        "median_income": 30486.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 5,
+        "geoid": "06075023103",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.418935,
+          37.798585
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 109.01; San Francisco County; California",
+        "median_income": 183468.0,
+        "avg_delay_min": 8.8,
+        "num_routes": 2,
+        "geoid": "06075010901",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.388098,
+          37.784285
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 615.08; San Francisco County; California",
+        "median_income": 157314.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 3,
+        "geoid": "06075061508",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.471194,
+          37.751244
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 303.02; San Francisco County; California",
+        "median_income": 216188.0,
+        "avg_delay_min": 1.4,
+        "num_routes": 6,
+        "geoid": "06075030302",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.406272,
+          37.802479
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 104.02; San Francisco County; California",
+        "median_income": 203354.0,
+        "avg_delay_min": 3.0,
+        "num_routes": 1,
+        "geoid": "06075010402",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.456841,
+          37.75911
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 301.02; San Francisco County; California",
+        "median_income": 208712.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 6,
+        "geoid": "06075030102",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.415259,
+          37.776498
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 176.03; San Francisco County; California",
+        "median_income": 124291.0,
+        "avg_delay_min": 2.1,
+        "num_routes": 15,
+        "geoid": "06075017603",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.390098,
+          37.737823
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 612; San Francisco County; California",
+        "median_income": 128380.0,
+        "avg_delay_min": 1.7,
+        "num_routes": 9,
+        "geoid": "06075061200",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.466538,
+          37.763032
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 302.02; San Francisco County; California",
+        "median_income": 122697.0,
+        "avg_delay_min": 1.4,
+        "num_routes": 8,
+        "geoid": "06075030202",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.419945,
+          37.791676
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 111.01; San Francisco County; California",
+        "median_income": 93056.0,
+        "avg_delay_min": 3.3,
+        "num_routes": 6,
+        "geoid": "06075011101",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.43791,
+          37.8007
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 126.01; San Francisco County; California",
+        "median_income": 171058.0,
+        "avg_delay_min": 0.1,
+        "num_routes": 2,
+        "geoid": "06075012601",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.423972,
+          37.792488
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 131.01; San Francisco County; California",
+        "median_income": 197014.0,
+        "avg_delay_min": 2.1,
+        "num_routes": 2,
+        "geoid": "06075013101",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.417958,
+          37.717336
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 9805.01; San Francisco County; California",
+        "median_income": 12908.0,
+        "avg_delay_min": 1.6,
+        "num_routes": 9,
+        "geoid": "06075980501",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4684,
+          37.757381
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 303.01; San Francisco County; California",
+        "median_income": 199167.0,
+        "avg_delay_min": 1.1,
+        "num_routes": 7,
+        "geoid": "06075030301",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.408411,
+          37.742297
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 251; San Francisco County; California",
+        "median_income": 165759.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 7,
         "geoid": "06075025100",
-        "name": "Bernal Heights",
-        "median_income": 115134,
-        "avg_delay_min": 4.3,
-        "num_routes": 5,
-        "population": 13115
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.424901,
-              37.74664
-            ],
-            [
-              -122.405818,
-              37.745552
-            ],
-            [
-              -122.407277,
-              37.733451
-            ],
-            [
-              -122.421208,
-              37.734903
-            ],
-            [
-              -122.424901,
-              37.74664
-            ]
-          ]
-        ]
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.418609,
+          37.751532
+        ]
+      },
       "properties": {
-        "geoid": "06075036100",
-        "name": "Oceanview",
-        "median_income": 63292,
-        "avg_delay_min": 5.5,
+        "name": "Census Tract 209; San Francisco County; California",
+        "median_income": 96250.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 8,
+        "geoid": "06075020900",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.497043,
+          37.743989
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 353; San Francisco County; California",
+        "median_income": 161074.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 6,
+        "geoid": "06075035300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.43158,
+          37.731049
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 255.02; San Francisco County; California",
+        "median_income": 180341.0,
+        "avg_delay_min": 0.9,
+        "num_routes": 7,
+        "geoid": "06075025502",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.458188,
+          37.764584
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 301.01; San Francisco County; California",
+        "median_income": 156156.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 6,
+        "geoid": "06075030101",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.444254,
+          37.797446
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 128.01; San Francisco County; California",
+        "median_income": 215568.0,
+        "avg_delay_min": 0.8,
         "num_routes": 4,
-        "population": 14507
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.46675,
-              37.730706
-            ],
-            [
-              -122.444338,
-              37.729795
-            ],
-            [
-              -122.44721,
-              37.717068
-            ],
-            [
-              -122.464434,
-              37.718599
-            ],
-            [
-              -122.46675,
-              37.730706
-            ]
-          ]
-        ]
+        "geoid": "06075012801",
+        "population": 0
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075036200",
-        "name": "Ingleside",
-        "median_income": 75336,
-        "avg_delay_min": 5.7,
-        "num_routes": 5,
-        "population": 12918
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.454304,
-              37.729401
-            ],
-            [
-              -122.431429,
-              37.728804
-            ],
-            [
-              -122.434732,
-              37.718188
-            ],
-            [
-              -122.451141,
-              37.719134
-            ],
-            [
-              -122.454304,
-              37.729401
-            ]
-          ]
+          -122.418791,
+          37.79036
         ]
-      }
-    },
-    {
-      "type": "Feature",
+      },
       "properties": {
-        "geoid": "06075036300",
-        "name": "Ingleside Terraces",
-        "median_income": 84774,
-        "avg_delay_min": 5.8,
+        "name": "Census Tract 111.02; San Francisco County; California",
+        "median_income": 104966.0,
+        "avg_delay_min": 6.8,
         "num_routes": 3,
-        "population": 8549
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.471975,
-              37.732839
-            ],
-            [
-              -122.45288,
-              37.731824
-            ],
-            [
-              -122.455333,
-              37.721811
-            ],
-            [
-              -122.468703,
-              37.722293
-            ],
-            [
-              -122.471975,
-              37.732839
-            ]
-          ]
-        ]
+        "geoid": "06075011102",
+        "population": 0
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.409162,
+          37.79161
+        ]
+      },
       "properties": {
-        "geoid": "06075014100",
-        "name": "Presidio Heights",
-        "median_income": 199710,
-        "avg_delay_min": 3.8,
+        "name": "Census Tract 119.02; San Francisco County; California",
+        "median_income": 75625.0,
+        "avg_delay_min": 13.9,
+        "num_routes": 3,
+        "geoid": "06075011902",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.438694,
+          37.778
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 158.02; San Francisco County; California",
+        "median_income": 152917.0,
+        "avg_delay_min": 1.0,
         "num_routes": 4,
-        "population": 7050
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.460956,
-              37.793131
-            ],
-            [
-              -122.439696,
-              37.792627
-            ],
-            [
-              -122.44065,
-              37.782477
-            ],
-            [
-              -122.458852,
-              37.783057
-            ],
-            [
-              -122.460956,
-              37.793131
-            ]
-          ]
-        ]
+        "geoid": "06075015802",
+        "population": 0
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "geoid": "06075014200",
-        "name": "Laurel Heights",
-        "median_income": 173732,
-        "avg_delay_min": 4.3,
-        "num_routes": 5,
-        "population": 8673
-      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              -122.464997,
-              37.789703
-            ],
-            [
-              -122.445639,
-              37.788349
-            ],
-            [
-              -122.447432,
-              37.780912
-            ],
-            [
-              -122.461474,
-              37.78183
-            ],
-            [
-              -122.464997,
-              37.789703
-            ]
-          ]
+          -122.412079,
+          37.713035
         ]
+      },
+      "properties": {
+        "name": "Census Tract 264.01; San Francisco County; California",
+        "median_income": 82045.0,
+        "avg_delay_min": 2.3,
+        "num_routes": 4,
+        "geoid": "06075026401",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.427517,
+          37.790715
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 131.02; San Francisco County; California",
+        "median_income": 250001.0,
+        "avg_delay_min": 2.9,
+        "num_routes": 1,
+        "geoid": "06075013102",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.42706,
+          37.78693
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 152.01; San Francisco County; California",
+        "median_income": 91420.0,
+        "avg_delay_min": 2.0,
+        "num_routes": 1,
+        "geoid": "06075015201",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.411993,
+          37.78018
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 176.04; San Francisco County; California",
+        "median_income": 101761.0,
+        "avg_delay_min": 1.6,
+        "num_routes": 17,
+        "geoid": "06075017604",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.478724,
+          37.727156
+        ]
+      },
+      "properties": {
+        "name": "nan",
+        "median_income": null,
+        "avg_delay_min": 0,
+        "num_routes": 0,
+        "geoid": "06075033201",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.406454,
+          37.758249
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 228.02; San Francisco County; California",
+        "median_income": 107083.0,
+        "avg_delay_min": 0.7,
+        "num_routes": 5,
+        "geoid": "06075022802",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.430555,
+          37.750057
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 214; San Francisco County; California",
+        "median_income": 213462.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 3,
+        "geoid": "06075021400",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.488574,
+          37.782183
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 427; San Francisco County; California",
+        "median_income": 102584.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 6,
+        "geoid": "06075042700",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.50439,
+          37.774772
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 479.03; San Francisco County; California",
+        "median_income": 144766.0,
+        "avg_delay_min": 0.7,
+        "num_routes": 2,
+        "geoid": "06075047903",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.437096,
+          37.745233
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 216; San Francisco County; California",
+        "median_income": 237083.0,
+        "avg_delay_min": 1.1,
+        "num_routes": 4,
+        "geoid": "06075021600",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.467491,
+          37.783718
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 402; San Francisco County; California",
+        "median_income": 187679.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 8,
+        "geoid": "06075040200",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.422446,
+          37.805118
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 102.02; San Francisco County; California",
+        "median_income": 176958.0,
+        "avg_delay_min": 3.2,
+        "num_routes": 7,
+        "geoid": "06075010202",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.411921,
+          37.788886
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 121; San Francisco County; California",
+        "median_income": 108000.0,
+        "avg_delay_min": 8.2,
+        "num_routes": 4,
+        "geoid": "06075012100",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.433692,
+          37.800983
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 129.02; San Francisco County; California",
+        "median_income": 189444.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 6,
+        "geoid": "06075012902",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41481,
+          37.804571
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 101.02; San Francisco County; California",
+        "median_income": 102826.0,
+        "avg_delay_min": 4.7,
+        "num_routes": 6,
+        "geoid": "06075010102",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41295,
+          37.783853
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 125.02; San Francisco County; California",
+        "median_income": 18217.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 2,
+        "geoid": "06075012502",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41234,
+          37.787219
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 123.02; San Francisco County; California",
+        "median_income": 44954.0,
+        "avg_delay_min": 2.2,
+        "num_routes": 6,
+        "geoid": "06075012302",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.420255,
+          37.785835
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 122.02; San Francisco County; California",
+        "median_income": 57897.0,
+        "avg_delay_min": 0.6,
+        "num_routes": 5,
+        "geoid": "06075012202",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.417737,
+          37.785757
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 122.03; San Francisco County; California",
+        "median_income": 23440.0,
+        "avg_delay_min": 0.7,
+        "num_routes": 3,
+        "geoid": "06075012203",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.422969,
+          37.798024
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 109.02; San Francisco County; California",
+        "median_income": 155234.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 4,
+        "geoid": "06075010902",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.403311,
+          37.790545
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 117; San Francisco County; California",
+        "median_income": 51464.0,
+        "avg_delay_min": 3.8,
+        "num_routes": 24,
+        "geoid": "06075011700",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.437461,
+          37.748832
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 213; San Francisco County; California",
+        "median_income": 208641.0,
+        "avg_delay_min": 2.0,
+        "num_routes": 6,
+        "geoid": "06075021300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.484063,
+          37.774643
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 477.02; San Francisco County; California",
+        "median_income": 112500.0,
+        "avg_delay_min": 0.6,
+        "num_routes": 4,
+        "geoid": "06075047702",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.42806,
+          37.743531
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 215; San Francisco County; California",
+        "median_income": 178488.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 3,
+        "geoid": "06075021500",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.402865,
+          37.715809
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 264.02; San Francisco County; California",
+        "median_income": 151250.0,
+        "avg_delay_min": 1.7,
+        "num_routes": 7,
+        "geoid": "06075026402",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.508078,
+          37.773075
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 479.04; San Francisco County; California",
+        "median_income": 105577.0,
+        "avg_delay_min": 1.1,
+        "num_routes": 6,
+        "geoid": "06075047904",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.44555,
+          37.770427
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 166.01; San Francisco County; California",
+        "median_income": 134211.0,
+        "avg_delay_min": 0.7,
+        "num_routes": 7,
+        "geoid": "06075016601",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.411457,
+          37.761363
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 228.01; San Francisco County; California",
+        "median_income": 160417.0,
+        "avg_delay_min": 2.4,
+        "num_routes": 2,
+        "geoid": "06075022801",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.43229,
+          37.786862
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 152.02; San Francisco County; California",
+        "median_income": 156713.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 2,
+        "geoid": "06075015202",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.423753,
+          37.786373
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 151; San Francisco County; California",
+        "median_income": 159921.0,
+        "avg_delay_min": -0.4,
+        "num_routes": 3,
+        "geoid": "06075015100",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.442126,
+          37.723957
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 255.01; San Francisco County; California",
+        "median_income": 113920.0,
+        "avg_delay_min": 0.3,
+        "num_routes": 3,
+        "geoid": "06075025501",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.409925,
+          37.783638
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 125.03; San Francisco County; California",
+        "median_income": 50696.0,
+        "avg_delay_min": 5.5,
+        "num_routes": 11,
+        "geoid": "06075012503",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.423817,
+          37.761572
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 207.02; San Francisco County; California",
+        "median_income": 160179.0,
+        "avg_delay_min": -0.8,
+        "num_routes": 1,
+        "geoid": "06075020702",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.483983,
+          37.778557
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 477.01; San Francisco County; California",
+        "median_income": 121923.0,
+        "avg_delay_min": 0.3,
+        "num_routes": 4,
+        "geoid": "06075047701",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.489963,
+          37.74628
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 329.01; San Francisco County; California",
+        "median_income": 176000.0,
+        "avg_delay_min": 2.5,
+        "num_routes": 5,
+        "geoid": "06075032901",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.429968,
+          37.737232
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 218; San Francisco County; California",
+        "median_income": 250001.0,
+        "avg_delay_min": 1.8,
+        "num_routes": 8,
+        "geoid": "06075021800",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.392492,
+          37.721324
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 234; San Francisco County; California",
+        "median_income": 62647.0,
+        "avg_delay_min": 0.5,
+        "num_routes": 4,
+        "geoid": "06075023400",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.394719,
+          37.77658
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 607.03; San Francisco County; California",
+        "median_income": 179727.0,
+        "avg_delay_min": 1.1,
+        "num_routes": 8,
+        "geoid": "06075060703",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.373178,
+          37.823782
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 179.03; San Francisco County; California",
+        "median_income": 93269.0,
+        "avg_delay_min": 1.0,
+        "num_routes": 1,
+        "geoid": "06075017903",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.449221,
+          37.783092
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 154.01; San Francisco County; California",
+        "median_income": 165833.0,
+        "avg_delay_min": -0.8,
+        "num_routes": 5,
+        "geoid": "06075015401",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.411777,
+          37.806842
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 101.01; San Francisco County; California",
+        "median_income": 89022.0,
+        "avg_delay_min": 2.5,
+        "num_routes": 9,
+        "geoid": "06075010101",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.433479,
+          37.804369
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 126.02; San Francisco County; California",
+        "median_income": 244000.0,
+        "avg_delay_min": 1.8,
+        "num_routes": 6,
+        "geoid": "06075012602",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.436208,
+          37.770525
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 167; San Francisco County; California",
+        "median_income": 239839.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 6,
+        "geoid": "06075016700",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.441797,
+          37.7886
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 134.02; San Francisco County; California",
+        "median_income": 175201.0,
+        "avg_delay_min": 2.3,
+        "num_routes": 2,
+        "geoid": "06075013402",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.413631,
+          37.737021
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 254.02; San Francisco County; California",
+        "median_income": 190625.0,
+        "avg_delay_min": 3.0,
+        "num_routes": 3,
+        "geoid": "06075025402",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.414712,
+          37.70846
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 264.04; San Francisco County; California",
+        "median_income": 84415.0,
+        "avg_delay_min": 1.6,
+        "num_routes": 7,
+        "geoid": "06075026404",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.423193,
+          37.773347
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 168.02; San Francisco County; California",
+        "median_income": 135588.0,
+        "avg_delay_min": 3.2,
+        "num_routes": 12,
+        "geoid": "06075016802",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41171,
+          37.78591
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 123.01; San Francisco County; California",
+        "median_income": 23385.0,
+        "avg_delay_min": 2.7,
+        "num_routes": 5,
+        "geoid": "06075012301",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.459278,
+          37.707211
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 262.01; San Francisco County; California",
+        "median_income": 160417.0,
+        "avg_delay_min": 2.8,
+        "num_routes": 5,
+        "geoid": "06075026201",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.433236,
+          37.711592
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 263.02; San Francisco County; California",
+        "median_income": 92031.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 5,
+        "geoid": "06075026302",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.430373,
+          37.765433
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 203; San Francisco County; California",
+        "median_income": 182547.0,
+        "avg_delay_min": 2.3,
+        "num_routes": 12,
+        "geoid": "06075020300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.436577,
+          37.759876
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 205; San Francisco County; California",
+        "median_income": 250001.0,
+        "avg_delay_min": 2.0,
+        "num_routes": 6,
+        "geoid": "06075020500",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.388767,
+          37.729789
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 232; San Francisco County; California",
+        "median_income": 82019.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 7,
+        "geoid": "06075023200",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.454107,
+          37.78627
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 154.02; San Francisco County; California",
+        "median_income": 171960.0,
+        "avg_delay_min": 2.0,
+        "num_routes": 3,
+        "geoid": "06075015402",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.443089,
+          37.721004
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 261; San Francisco County; California",
+        "median_income": 122222.0,
+        "avg_delay_min": 1.5,
+        "num_routes": 14,
+        "geoid": "06075026100",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.428297,
+          37.719975
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 260.03; San Francisco County; California",
+        "median_income": 105250.0,
+        "avg_delay_min": 0.6,
+        "num_routes": 3,
+        "geoid": "06075026003",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.411138,
+          37.756375
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 228.03; San Francisco County; California",
+        "median_income": 164665.0,
+        "avg_delay_min": 2.4,
+        "num_routes": 2,
+        "geoid": "06075022803",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.474525,
+          37.78387
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 426.02; San Francisco County; California",
+        "median_income": 156726.0,
+        "avg_delay_min": 1.8,
+        "num_routes": 6,
+        "geoid": "06075042602",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.438747,
+          37.790147
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 134.01; San Francisco County; California",
+        "median_income": 212593.0,
+        "avg_delay_min": 2.4,
+        "num_routes": 2,
+        "geoid": "06075013401",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.422129,
+          37.738819
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 254.01; San Francisco County; California",
+        "median_income": 204844.0,
+        "avg_delay_min": 1.4,
+        "num_routes": 5,
+        "geoid": "06075025401",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.426438,
+          37.780735
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 161.02; San Francisco County; California",
+        "median_income": 34575.0,
+        "avg_delay_min": 1.1,
+        "num_routes": 3,
+        "geoid": "06075016102",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.446483,
+          37.711587
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 262.02; San Francisco County; California",
+        "median_income": 148429.0,
+        "avg_delay_min": 3.1,
+        "num_routes": 2,
+        "geoid": "06075026202",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.417004,
+          37.779553
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 124.05; San Francisco County; California",
+        "median_income": 113665.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 21,
+        "geoid": "06075012405",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.474426,
+          37.763479
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 302.01; San Francisco County; California",
+        "median_income": 109659.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 7,
+        "geoid": "06075030201",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.397569,
+          37.725252
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 233; San Francisco County; California",
+        "median_income": 89531.0,
+        "avg_delay_min": 0.2,
+        "num_routes": 4,
+        "geoid": "06075023300",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.448158,
+          37.73785
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 307; San Francisco County; California",
+        "median_income": 185104.0,
+        "avg_delay_min": 2.3,
+        "num_routes": 2,
+        "geoid": "06075030700",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.480753,
+          37.78405
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 426.01; San Francisco County; California",
+        "median_income": 138646.0,
+        "avg_delay_min": 1.9,
+        "num_routes": 2,
+        "geoid": "06075042601",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.429908,
+          37.771476
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 168.01; San Francisco County; California",
+        "median_income": 123147.0,
+        "avg_delay_min": 1.4,
+        "num_routes": 5,
+        "geoid": "06075016801",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.411141,
+          37.802514
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 104.01; San Francisco County; California",
+        "median_income": 181705.0,
+        "avg_delay_min": 3.2,
+        "num_routes": 6,
+        "geoid": "06075010401",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.421979,
+          37.711093
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 605.02; San Francisco County; California",
+        "median_income": 39559.0,
+        "avg_delay_min": 2.2,
+        "num_routes": 6,
+        "geoid": "06075060502",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.474614,
+          37.715423
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 332.03; San Francisco County; California",
+        "median_income": 76923.0,
+        "avg_delay_min": 2.9,
+        "num_routes": 3,
+        "geoid": "06075033203",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.487828,
+          37.733504
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 331; San Francisco County; California",
+        "median_income": 176806.0,
+        "avg_delay_min": -0.2,
+        "num_routes": 6,
+        "geoid": "06075033100",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.43742,
+          37.753257
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 212; San Francisco County; California",
+        "median_income": 201786.0,
+        "avg_delay_min": 1.2,
+        "num_routes": 3,
+        "geoid": "06075021200",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.409583,
+          37.752218
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 229.02; San Francisco County; California",
+        "median_income": 205583.0,
+        "avg_delay_min": 2.2,
+        "num_routes": 2,
+        "geoid": "06075022902",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.50476,
+          37.7422
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 354; San Francisco County; California",
+        "median_income": 149794.0,
+        "avg_delay_min": 2.5,
+        "num_routes": 5,
+        "geoid": "06075035400",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.406797,
+          37.776633
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 178.04; San Francisco County; California",
+        "median_income": 134264.0,
+        "avg_delay_min": 2.3,
+        "num_routes": 6,
+        "geoid": "06075017804",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.459845,
+          37.79932
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 601; San Francisco County; California",
+        "median_income": 219750.0,
+        "avg_delay_min": 0.8,
+        "num_routes": 5,
+        "geoid": "06075060100",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.47471,
+          37.776992
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 476; San Francisco County; California",
+        "median_income": 180000.0,
+        "avg_delay_min": 0.8,
+        "num_routes": 8,
+        "geoid": "06075047600",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.401352,
+          37.735281
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 230.01; San Francisco County; California",
+        "median_income": 129866.0,
+        "avg_delay_min": 0.9,
+        "num_routes": 6,
+        "geoid": "06075023001",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.444185,
+          37.802171
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 127; San Francisco County; California",
+        "median_income": 234886.0,
+        "avg_delay_min": 0.0,
+        "num_routes": 4,
+        "geoid": "06075012700",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.437888,
+          37.798543
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 128.02; San Francisco County; California",
+        "median_income": 250001.0,
+        "avg_delay_min": 0.9,
+        "num_routes": 7,
+        "geoid": "06075012802",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.451633,
+          37.769685
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 166.02; San Francisco County; California",
+        "median_income": 223877.0,
+        "avg_delay_min": 0.6,
+        "num_routes": 6,
+        "geoid": "06075016602",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.438318,
+          37.781373
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 158.01; San Francisco County; California",
+        "median_income": 121563.0,
+        "avg_delay_min": 1.1,
+        "num_routes": 5,
+        "geoid": "06075015801",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.43197,
+          37.779364
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 161.01; San Francisco County; California",
+        "median_income": 31690.0,
+        "avg_delay_min": 1.3,
+        "num_routes": 4,
+        "geoid": "06075016101",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41497,
+          37.783155
+        ]
+      },
+      "properties": {
+        "name": "nan",
+        "median_income": null,
+        "avg_delay_min": 0,
+        "num_routes": 0,
+        "geoid": "06075012404",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.438656,
+          37.715028
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 263.01; San Francisco County; California",
+        "median_income": 115125.0,
+        "avg_delay_min": 1.5,
+        "num_routes": 7,
+        "geoid": "06075026301",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.420193,
+          37.801505
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 102.01; San Francisco County; California",
+        "median_income": 156017.0,
+        "avg_delay_min": 13.8,
+        "num_routes": 2,
+        "geoid": "06075010201",
+        "population": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.42207,
+          37.783267
+        ]
+      },
+      "properties": {
+        "name": "Census Tract 160; San Francisco County; California",
+        "median_income": 131771.0,
+        "avg_delay_min": 0.4,
+        "num_routes": 4,
+        "geoid": "06075016000",
+        "population": 0
       }
     }
   ]

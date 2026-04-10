@@ -1,0 +1,38 @@
+{
+  "r_squared": 0.1185,
+  "adj_r_squared": 0.0772,
+  "f_statistic": 2.87,
+  "f_pvalue": 0.043266,
+  "n_observations": 68,
+  "coefficients": {
+    "const": {
+      "coef": 7.15769404,
+      "std_err": 1.91704807,
+      "pvalue": 0.000404,
+      "ci_low": 3.32795027,
+      "ci_high": 10.98743781
+    },
+    "weighted_median_income": {
+      "coef": -2.619e-05,
+      "std_err": 1.233e-05,
+      "pvalue": 0.037589,
+      "ci_low": -5.083e-05,
+      "ci_high": -1.55e-06
+    },
+    "num_stops": {
+      "coef": -0.0151874,
+      "std_err": 0.00951562,
+      "pvalue": 0.115404,
+      "ci_low": -0.03419703,
+      "ci_high": 0.00382224
+    },
+    "is_rapid": {
+      "coef": -1.85123731,
+      "std_err": 1.32840412,
+      "pvalue": 0.168265,
+      "ci_low": -4.50502961,
+      "ci_high": 0.80255499
+    }
+  },
+  "income_interpretation": "For every $10,000 decrease in weighted median neighborhood income, average route delay increases by 0.26 minutes (16 seconds), controlling for route size and type."
+}

@@ -2,33 +2,90 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --ink: #1a1a1a;
+  --paper: #faf8f5;
+  --muted: #6b6560;
+  --border: #e5e0da;
+  --accent: #c41e3a;
+  --surface: #fff;
+}
+
 body {
   margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f8f9fb;
-  color: #1a1f36;
+  font-family: var(--font-sans);
+  background: var(--paper);
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.2s, color 0.2s;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .dark body {
-  background: #0f1117;
-  color: #e2e8f0;
+  --ink: #e8e4df;
+  --paper: #111111;
+  --muted: #9a9590;
+  --border: #2a2725;
+  --surface: #1a1918;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 
 .mapboxgl-popup-content {
-  border-radius: 8px !important;
-  padding: 12px 16px !important;
-  font-family: inherit !important;
+  border-radius: 4px !important;
+  padding: 10px 14px !important;
+  font-family: var(--font-sans) !important;
   font-size: 13px !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12) !important;
+  border: 1px solid var(--border) !important;
 }
 
 .dark .mapboxgl-popup-content {
-  background: #1e2130 !important;
-  color: #e2e8f0 !important;
+  background: var(--surface) !important;
+  color: var(--ink) !important;
+  border-color: var(--border) !important;
 }
 
-.mapboxgl-ctrl-attrib {
-  font-size: 10px !important;
+.mapboxgl-ctrl-attrib { font-size: 10px !important; }
+
+::selection {
+  background: #c41e3a;
+  color: white;
+}
+
+/* Scroll animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.anim-ready { opacity: 0; }
+.anim-in { animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.anim-fade { animation: fadeIn 0.6s ease-out both; }
+
+.anim-delay-1 { animation-delay: 0.1s; }
+.anim-delay-2 { animation-delay: 0.2s; }
+.anim-delay-3 { animation-delay: 0.3s; }
+.anim-delay-4 { animation-delay: 0.4s; }
+
+/* Live pulse */
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.8); }
+}
+.pulse-dot {
+  animation: pulse-live 2s ease-in-out infinite;
 }

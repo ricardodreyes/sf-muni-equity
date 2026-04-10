@@ -1,12 +1,16 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Explorer from './pages/Explorer'
 import Rankings from './pages/Rankings'
 import Methodology from './pages/Methodology'
+import Live from './pages/Live'
 
 function App() {
+  const location = useLocation()
+  const isLive = location.pathname === '/live'
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -16,9 +20,10 @@ function App() {
           <Route path="/explorer" element={<Explorer />} />
           <Route path="/rankings" element={<Rankings />} />
           <Route path="/methodology" element={<Methodology />} />
+          <Route path="/live" element={<Live />} />
         </Routes>
       </main>
-      <Footer />
+      {!isLive && <Footer />}
     </div>
   )
 }
