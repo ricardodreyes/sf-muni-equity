@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const url = `http://api.511.org/transit/VehicleMonitoring?api_key=${API_KEY}&agency=SF&format=json`
+    const url = `https://api.511.org/transit/VehicleMonitoring?api_key=${API_KEY}&agency=SF&format=json`
     const response = await fetch(url)
 
     if (!response.ok) {

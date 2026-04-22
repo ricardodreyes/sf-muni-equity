@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const url = `http://api.511.org/transit/StopMonitoring?api_key=${API_KEY}&agency=SF&stopCode=${stopId}&format=json`
+    const url = `https://api.511.org/transit/StopMonitoring?api_key=${API_KEY}&agency=SF&stopCode=${encodeURIComponent(stopId)}&format=json`
     const response = await fetch(url)
 
     if (!response.ok) {
