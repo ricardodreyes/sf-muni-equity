@@ -199,7 +199,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-5 text-center">
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
             This analysis uses {stats.totalObs.toLocaleString()} stop-level observations from 511.org
-            GTFS archives (Dec 2025 - Feb 2026), Census ACS 5-year median household income
+            GTFS archives covering December 2025 through February 2026, Census ACS 5-year median household income
             estimates, and TIGER/Line tract boundaries. Routes are classified as "on-time" per the SFMTA
             standard: arriving between 1 minute early and 5 minutes late.
           </p>

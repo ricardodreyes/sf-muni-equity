@@ -57,10 +57,10 @@ export default function RankingsTable() {
           className="px-3 py-1.5 bg-[var(--surface)] border border-[var(--border)] text-[13px] text-[var(--ink)] focus:outline-none focus:border-[var(--accent)]"
           style={{ borderRadius: '3px' }}>
           <option value="all">All quartiles</option>
-          <option value="1">Q1 - Lowest</option>
+          <option value="1">Q1 (Lowest)</option>
           <option value="2">Q2</option>
           <option value="3">Q3</option>
-          <option value="4">Q4 - Highest</option>
+          <option value="4">Q4 (Highest)</option>
         </select>
         <span className="ml-auto text-[12px] text-[var(--muted)]">{sorted.length} routes</span>
       </div>

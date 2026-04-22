@@ -66,9 +66,9 @@ export default function RouteCard({ route, compact = false }) {
 
       {!compact && route.delay_by_hour && (
         <div className="grid grid-cols-2 gap-4 pt-3 mt-3 border-t border-[var(--border)]">
-          <MiniBar data={route.delay_by_hour} label="Delay by hour (5am-11pm)" />
+          <MiniBar data={route.delay_by_hour} label="Delay by hour (5am to 11pm)" />
           {route.delay_by_day && (
-            <MiniBar data={Object.values(route.delay_by_day)} label="Delay by day (Mon-Sun)" />
+            <MiniBar data={Object.values(route.delay_by_day)} label="Delay by day (Mon through Sun)" />
           )}
         </div>
       )}

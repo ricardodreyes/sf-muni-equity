@@ -29,7 +29,7 @@ export default function Methodology() {
             },
             {
               title: 'Income Data',
-              text: 'U.S. Census Bureau American Community Survey (ACS) 5-Year Estimates (2020-2024), variable B19013_001E (median household income), at the census tract level for San Francisco County (FIPS 06075).',
+              text: 'U.S. Census Bureau American Community Survey (ACS) 5-Year Estimates covering 2020 through 2024, variable B19013_001E (median household income), at the census tract level for San Francisco County (FIPS 06075).',
             },
             {
               title: 'Geographic Boundaries',
@@ -65,7 +65,7 @@ export default function Methodology() {
         </h2>
         <ul className="space-y-2 text-[14px] text-[var(--muted)] leading-relaxed list-disc list-inside">
           <li>Stop observations may have gaps from GPS errors or equipment malfunctions.</li>
-          <li>Census income is a 5-year estimate (2020-2024); neighborhood composition may have shifted.</li>
+          <li>Census income is a 5-year estimate covering 2020 through 2024; neighborhood composition may have shifted.</li>
           <li>Three-month study period may not capture seasonal variation.</li>
           <li>Route-level income blends wealthy and low-income areas along the same route.</li>
           <li>Correlation does not imply causation. Income may proxy for traffic density, road conditions, or ridership volume.</li>

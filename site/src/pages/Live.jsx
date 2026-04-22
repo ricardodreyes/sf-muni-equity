@@ -393,7 +393,7 @@ export default function Live() {
                       <span className={`font-bold tabular-nums ${
                         p.minutesAway != null && p.minutesAway <= 5 ? 'text-[#22c55e]' : 'text-[var(--ink)]'
                       }`}>
-                        {p.minutesAway != null ? `${p.minutesAway} min` : '--'}
+                        {p.minutesAway != null ? `${p.minutesAway} min` : 'N/A'}
                       </span>
                       {hist && (
                         <div className="text-[10px] text-[var(--muted)]">Avg. {hist}m delay</div>
