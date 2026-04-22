@@ -311,7 +311,7 @@ export default function Live() {
     map.current.on('load', async () => {
       // Fetch static shape + stop data in parallel with first vehicles poll
       const [shapesRes, stopsRes, initial] = await Promise.all([
-        fetch('/data/route-shapes.geojson').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch('/data/muni_routes.geojson').then(r => r.ok ? r.json() : null).catch(() => null),
         fetch('/data/muni_stops.geojson').then(r => r.ok ? r.json() : null).catch(() => null),
         fetchVehicles(),
       ])
@@ -335,14 +335,27 @@ export default function Live() {
     })
   }, [dark])
 
-  // Polling
+  // Polling – pause when the tab is hidden to spare the 511.org quota
   useEffect(() => {
-    timerRef.current = setInterval(async () => {
+    const poll = async () => {
+      if (document.hidden) return
       const v = await fetchVehicles()
       updateMapData(v)
       applyLiveDelayToRoutes(computeLiveDelayByRoute(v))
-    }, POLL_INTERVAL)
-    return () => clearInterval(timerRef.current)
+    }
+    timerRef.current = setInterval(poll, POLL_INTERVAL)
+    const onVisible = () => { if (!document.hidden) poll() }
+    document.addEventListener('visibilitychange', onVisible)
+    return () => {
+      clearInterval(timerRef.current)
+      document.removeEventListener('visibilitychange', onVisible)
+    }
+  }, [fetchVehicles])
+
+  const refreshNow = useCallback(async () => {
+    const v = await fetchVehicles()
+    updateMapData(v)
+    applyLiveDelayToRoutes(computeLiveDelayByRoute(v))
   }, [fetchVehicles])
 
   function applyLiveDelayToRoutes(liveByRoute) {
@@ -410,11 +423,22 @@ export default function Live() {
       {/* Sidebar */}
       <div className="w-full sm:w-80 flex-shrink-0 border-b sm:border-b-0 sm:border-r border-[var(--border)] overflow-y-auto bg-[var(--paper)]">
         <div className="p-4 border-b border-[var(--border)]">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="w-2 h-2 rounded-full bg-[#22c55e] pulse-dot" />
-            <h1 className="text-[15px] font-bold text-[var(--ink)]" style={{ fontFamily: 'var(--font-serif)' }}>
-              Live Muni Tracker
-            </h1>
+          <div className="flex items-center justify-between mb-1">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#22c55e] pulse-dot" />
+              <h1 className="text-[15px] font-bold text-[var(--ink)]" style={{ fontFamily: 'var(--font-serif)' }}>
+                Live Muni Tracker
+              </h1>
+            </div>
+            <button
+              onClick={refreshNow}
+              disabled={loading}
+              className="text-[10px] font-semibold uppercase tracking-wider px-2 py-1 border border-[var(--border)] text-[var(--muted)] hover:text-[var(--ink)] hover:border-[var(--ink)] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              style={{ borderRadius: '3px' }}
+              aria-label="Refresh data now"
+            >
+              Refresh
+            </button>
           </div>
           <p className="text-[12px] text-[var(--muted)]">
             {loading ? 'Loading vehicles...' : error ? `Error: ${error}` : (
@@ -427,7 +451,7 @@ export default function Live() {
             )}
           </p>
           <p className="text-[10px] text-[var(--muted)]/50 mt-1">
-            Auto-refreshes every 90s. Hover for details, click for predictions.
+            Auto-refreshes every 90s; pauses when the tab is hidden. Hover a vehicle for details, click a stop for live arrivals.
           </p>
         </div>
 
