@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import mapboxgl from 'mapbox-gl'
 import { useTheme } from '../ThemeContext'
 import { checkMapLoad } from '../mapUsage'
@@ -8,6 +8,25 @@ mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
 
 const POLL_INTERVAL = 90_000
 const routeDelayMap = Object.fromEntries(routes.map(r => [r.route_id, r]))
+
+function computeLiveDelayByRoute(vehicles) {
+  const byRoute = {}
+  for (const v of vehicles) {
+    if (!v.expectedArrival || !v.aimed || !v.routeId) continue
+    const ex = Date.parse(v.expectedArrival)
+    const am = Date.parse(v.aimed)
+    if (isNaN(ex) || isNaN(am)) continue
+    const min = (ex - am) / 60000
+    if (Math.abs(min) > 60) continue
+    if (!byRoute[v.routeId]) byRoute[v.routeId] = { routeId: v.routeId, routeName: v.routeName, delays: [] }
+    byRoute[v.routeId].delays.push(min)
+  }
+  return Object.values(byRoute).map(r => {
+    const n = r.delays.length
+    const avg = r.delays.reduce((s, x) => s + x, 0) / n
+    return { routeId: r.routeId, routeName: r.routeName, avgDelay: avg, vehicleCount: n }
+  })
+}
 
 function esc(val) {
   return String(val ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -90,9 +109,20 @@ export default function Live() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [selectedVehicle, setSelectedVehicle] = useState(null)
+  const [selectedStop, setSelectedStop] = useState(null)
   const [predictions, setPredictions] = useState(null)
   const [predLoading, setPredLoading] = useState(false)
+  const [leaderboardSort, setLeaderboardSort] = useState('late') // 'late' | 'ontime'
   const timerRef = useRef(null)
+  const staticDataRef = useRef({ stops: null, routeShapes: null })
+
+  const liveDelayByRoute = useMemo(() => computeLiveDelayByRoute(vehicles), [vehicles])
+  const liveDelayLookup = useMemo(() => Object.fromEntries(liveDelayByRoute.map(r => [r.routeId, r.avgDelay])), [liveDelayByRoute])
+  const leaderboard = useMemo(() => {
+    const eligible = liveDelayByRoute.filter(r => r.vehicleCount >= 2)
+    const sorted = [...eligible].sort((a, b) => leaderboardSort === 'late' ? b.avgDelay - a.avgDelay : a.avgDelay - b.avgDelay)
+    return sorted.slice(0, 8)
+  }, [liveDelayByRoute, leaderboardSort])
 
   const fetchVehicles = useCallback(async () => {
     try {
@@ -130,6 +160,55 @@ export default function Live() {
   function addLayers(isDark) {
     if (!map.current) return
 
+    // Route shapes (drawn first, underneath everything)
+    map.current.addSource('route-lines', {
+      type: 'geojson',
+      data: staticDataRef.current.routeShapes || { type: 'FeatureCollection', features: [] },
+    })
+
+    map.current.addLayer({
+      id: 'route-lines',
+      type: 'line',
+      source: 'route-lines',
+      paint: {
+        'line-color': [
+          'case',
+          ['has', 'liveDelay'],
+          ['interpolate', ['linear'], ['get', 'liveDelay'],
+            -2, '#22c55e',
+            0, '#86efac',
+            2, '#eab308',
+            5, '#f97316',
+            10, '#ef4444',
+          ],
+          isDark ? '#3b3a37' : '#c8c1b8',
+        ],
+        'line-width': ['interpolate', ['linear'], ['zoom'], 10, 1.5, 14, 3],
+        'line-opacity': ['case', ['has', 'liveDelay'], 0.85, 0.45],
+      },
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+    })
+
+    // Stops (small, unobtrusive, only at higher zoom)
+    map.current.addSource('stops', {
+      type: 'geojson',
+      data: staticDataRef.current.stops || { type: 'FeatureCollection', features: [] },
+    })
+
+    map.current.addLayer({
+      id: 'stop-circles',
+      type: 'circle',
+      source: 'stops',
+      minzoom: 13,
+      paint: {
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 13, 1.5, 16, 3.5],
+        'circle-color': isDark ? '#6b6560' : '#8a8580',
+        'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 13, 0, 15, 1],
+        'circle-stroke-color': isDark ? '#111' : '#fff',
+        'circle-opacity': ['interpolate', ['linear'], ['zoom'], 13, 0.5, 16, 0.9],
+      },
+    })
+
     map.current.addSource('vehicles', {
       type: 'geojson',
       data: { type: 'FeatureCollection', features: [] },
@@ -151,6 +230,27 @@ export default function Live() {
         'circle-stroke-color': isDark ? '#222' : '#fff',
         'circle-opacity': 0.9,
       },
+    })
+
+    // Stop hover popup
+    const stopPopup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false, maxWidth: '220px' })
+    map.current.on('mouseenter', 'stop-circles', (e) => {
+      map.current.getCanvas().style.cursor = 'pointer'
+      const p = e.features[0].properties
+      stopPopup
+        .setLngLat(e.lngLat)
+        .setHTML(`<strong style="font-size:12px">${esc(p.stop_name)}</strong><br/><span style="color:#999;font-size:10px">Stop ${esc(p.stop_code)}</span>`)
+        .addTo(map.current)
+    })
+    map.current.on('mouseleave', 'stop-circles', () => {
+      map.current.getCanvas().style.cursor = ''
+      stopPopup.remove()
+    })
+    map.current.on('click', 'stop-circles', (e) => {
+      const p = e.features[0].properties
+      fetchPredictions(p.stop_code)
+      setSelectedVehicle(null)
+      setSelectedStop({ stop_id: p.stop_id, stop_code: p.stop_code, stop_name: p.stop_name, lngLat: e.lngLat })
     })
 
     map.current.addLayer({
@@ -209,9 +309,17 @@ export default function Live() {
     map.current.addControl(new mapboxgl.NavigationControl(), 'top-right')
 
     map.current.on('load', async () => {
+      // Fetch static shape + stop data in parallel with first vehicles poll
+      const [shapesRes, stopsRes, initial] = await Promise.all([
+        fetch('/data/route-shapes.geojson').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch('/data/muni_stops.geojson').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetchVehicles(),
+      ])
+      staticDataRef.current.routeShapes = shapesRes
+      staticDataRef.current.stops = stopsRes
       addLayers(dark)
-      const initial = await fetchVehicles()
       updateMapData(initial)
+      applyLiveDelayToRoutes(computeLiveDelayByRoute(initial))
     })
 
     return () => { map.current?.remove(); map.current = null }
@@ -232,9 +340,26 @@ export default function Live() {
     timerRef.current = setInterval(async () => {
       const v = await fetchVehicles()
       updateMapData(v)
+      applyLiveDelayToRoutes(computeLiveDelayByRoute(v))
     }, POLL_INTERVAL)
     return () => clearInterval(timerRef.current)
   }, [fetchVehicles])
+
+  function applyLiveDelayToRoutes(liveByRoute) {
+    if (!map.current?.getSource('route-lines')) return
+    const shapes = staticDataRef.current.routeShapes
+    if (!shapes) return
+    const lookup = Object.fromEntries(liveByRoute.map(r => [r.routeId, r.avgDelay]))
+    const updated = {
+      type: 'FeatureCollection',
+      features: shapes.features.map(f => {
+        const id = f.properties.route_id
+        if (lookup[id] == null) return f
+        return { ...f, properties: { ...f.properties, liveDelay: Number(lookup[id].toFixed(2)) } }
+      }),
+    }
+    map.current.getSource('route-lines').setData(updated)
+  }
 
   function vehiclesToGeoJSON(list) {
     return {
@@ -375,9 +500,19 @@ export default function Live() {
         {/* Predictions for the selected stop */}
         {predictions?.predictions?.length > 0 && (
           <div className="p-4 border-b border-[var(--border)]">
-            <h3 className="text-[11px] font-semibold text-[var(--muted)] uppercase tracking-wider mb-2">
-              Arriving at {predictions.predictions[0]?.stopName || 'this stop'}
-            </h3>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-[11px] font-semibold text-[var(--muted)] uppercase tracking-wider">
+                Arriving at {selectedStop?.stop_name || predictions.predictions[0]?.stopName || 'this stop'}
+              </h3>
+              {selectedStop && (
+                <button
+                  onClick={() => { setSelectedStop(null); setPredictions(null) }}
+                  className="text-[var(--muted)] hover:text-[var(--ink)] text-[11px]"
+                >
+                  Close
+                </button>
+              )}
+            </div>
             <div className="space-y-1.5">
               {predictions.predictions.slice(0, 8).map((p, i) => {
                 const hist = getHistoricalDelay(p.routeId)
@@ -409,6 +544,56 @@ export default function Live() {
           <div className="p-4 text-[12px] text-[var(--muted)]">Loading predictions...</div>
         )}
 
+        {/* Live route leaderboard */}
+        <div className="p-4 border-b border-[var(--border)]">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-[11px] font-semibold text-[var(--muted)] uppercase tracking-wider">
+              Routes right now
+            </h3>
+          </div>
+          <div className="flex gap-0 mb-3 text-[11px] font-medium border border-[var(--border)]" style={{ borderRadius: '3px' }}>
+            <button
+              onClick={() => setLeaderboardSort('late')}
+              className={`flex-1 px-2 py-1 transition-colors ${leaderboardSort === 'late' ? 'bg-[var(--ink)] text-[var(--paper)]' : 'text-[var(--muted)] hover:text-[var(--ink)]'}`}
+            >
+              Most delayed
+            </button>
+            <button
+              onClick={() => setLeaderboardSort('ontime')}
+              className={`flex-1 px-2 py-1 transition-colors border-l border-[var(--border)] ${leaderboardSort === 'ontime' ? 'bg-[var(--ink)] text-[var(--paper)]' : 'text-[var(--muted)] hover:text-[var(--ink)]'}`}
+            >
+              Most on-time
+            </button>
+          </div>
+          {leaderboard.length === 0 ? (
+            <div className="text-[11px] text-[var(--muted)]/60">Gathering live arrival data...</div>
+          ) : (
+            <div className="space-y-1">
+              {leaderboard.map((r) => {
+                const late = r.avgDelay > 0
+                const color = r.avgDelay > 5 ? '#ef4444' : r.avgDelay > 2 ? '#f97316' : r.avgDelay > 0 ? '#eab308' : '#22c55e'
+                return (
+                  <div key={r.routeId} className="flex items-center justify-between text-[12px] py-1 border-b border-[var(--border)]/40 last:border-0">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: color }} />
+                      <span className="font-medium text-[var(--ink)] truncate">{r.routeName}</span>
+                    </div>
+                    <div className="text-right flex-shrink-0 ml-2">
+                      <span className="font-bold tabular-nums" style={{ color }}>
+                        {late ? '+' : ''}{r.avgDelay.toFixed(1)}m
+                      </span>
+                      <div className="text-[9px] text-[var(--muted)]/70">{r.vehicleCount} vehicle{r.vehicleCount === 1 ? '' : 's'}</div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          )}
+          <p className="text-[10px] text-[var(--muted)]/50 mt-2">
+            Avg. minutes late or early, computed from live 511.org arrival estimates across currently tracked vehicles.
+          </p>
+        </div>
+
         {/* Legend */}
         <div className="p-4">
           <h3 className="text-[10px] font-semibold text-[var(--muted)] uppercase tracking-wider mb-2">Legend</h3>
@@ -422,9 +607,20 @@ export default function Live() {
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444]" /> More than 2 min away
             </div>
+            <div className="mt-2 pt-2 border-t border-[var(--border)]/40 space-y-1.5">
+              <div className="flex items-center gap-2">
+                <span className="inline-block w-6 h-0.5" style={{ background: '#22c55e' }} /> Route on-time now
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="inline-block w-6 h-0.5" style={{ background: '#ef4444' }} /> Route running late now
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--muted)]/60" /> Bus stop (at zoom 13+)
+              </div>
+            </div>
           </div>
           <p className="text-[10px] text-[var(--muted)]/40 mt-3">
-            Only in-service vehicles are shown. Out-of-service/deadheading vehicles are filtered out.
+            Only in-service vehicles are shown. Click a stop for live arrival predictions.
           </p>
         </div>
       </div>
