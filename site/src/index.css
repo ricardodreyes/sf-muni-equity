@@ -81,6 +81,14 @@ h1, h2, h3 {
 .anim-delay-3 { animation-delay: 0.3s; }
 .anim-delay-4 { animation-delay: 0.4s; }
 
+@media (prefers-reduced-motion: reduce) {
+  .anim-ready, .anim-in, .anim-fade, .pulse-dot {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 /* Live pulse */
 @keyframes pulse-live {
   0%, 100% { opacity: 1; transform: scale(1); }
