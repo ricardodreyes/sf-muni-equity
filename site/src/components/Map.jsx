@@ -169,17 +169,27 @@ export default function Map({ onRouteClick, className = '' }) {
 
   function getIncomeColorExpr() {
     return [
-      'interpolate', ['linear'], ['get', 'median_income'],
-      30000, '#7b3294', 60000, '#c2a5cf', 90000, '#f7f7f7',
-      130000, '#a6dba0', 200000, '#008837',
+      'case',
+      ['==', ['typeof', ['get', 'median_income']], 'number'],
+      [
+        'interpolate', ['linear'], ['get', 'median_income'],
+        30000, '#7b3294', 60000, '#c2a5cf', 90000, '#f7f7f7',
+        130000, '#a6dba0', 200000, '#008837',
+      ],
+      'rgba(150, 150, 150, 0.25)',
     ]
   }
 
   function getDelayColorExpr() {
     return [
-      'interpolate', ['linear'], ['get', 'avg_delay_min'],
-      1.5, '#008837', 3, '#a6dba0', 4.5, '#f7f7f7',
-      5.5, '#c2a5cf', 7, '#7b3294',
+      'case',
+      ['==', ['typeof', ['get', 'avg_delay_min']], 'number'],
+      [
+        'interpolate', ['linear'], ['get', 'avg_delay_min'],
+        1.5, '#008837', 3, '#a6dba0', 4.5, '#f7f7f7',
+        5.5, '#c2a5cf', 7, '#7b3294',
+      ],
+      'rgba(150, 150, 150, 0.25)',
     ]
   }
 
