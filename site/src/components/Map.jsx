@@ -49,7 +49,6 @@ export default function Map({ onRouteClick, className = '' }) {
     map.current.on('load', async () => {
       await addDataLayers()
       setLoading(false)
-      if (typeof window !== 'undefined') window.__debugMap = map.current
     })
 
     return () => {
