@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import routes from '../data/routes.json'
+import { routes } from '../data/routes'
 
 const columns = [
   { key: 'rank', label: '#', className: 'w-10' },

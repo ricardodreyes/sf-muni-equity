@@ -1,10 +1,13 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Map from '../components/Map'
 import ScatterPlot from '../components/ScatterPlot'
+import RouteLookup from '../components/RouteLookup'
 import useInView from '../useInView'
 import CountUp from '../CountUp'
-import routes from '../data/routes.json'
+import { routes, routesByShortId } from '../data/routes'
+
+const LIVE_POLL_INTERVAL = 90_000
 
 function Section({ children, className = '', delay = 0 }) {
   const [ref, inView] = useInView({ threshold: 0.1 })
@@ -19,23 +22,69 @@ function Section({ children, className = '', delay = 0 }) {
   )
 }
 
+function useLiveVehicleCount() {
+  const [count, setCount] = useState(null)
+  const [updatedAt, setUpdatedAt] = useState(null)
+  const timer = useRef(null)
+
+  useEffect(() => {
+    let cancelled = false
+    const tick = async () => {
+      if (document.hidden) return
+      try {
+        const res = await fetch('/api/vehicles')
+        if (!res.ok) return
+        const data = await res.json()
+        if (cancelled) return
+        setCount(Array.isArray(data.vehicles) ? data.vehicles.length : null)
+        setUpdatedAt(new Date())
+      } catch {
+        // Silent — Home renders fine without live data
+      }
+    }
+    tick()
+    timer.current = setInterval(tick, LIVE_POLL_INTERVAL)
+    const onVisible = () => { if (!document.hidden) tick() }
+    document.addEventListener('visibilitychange', onVisible)
+    return () => {
+      cancelled = true
+      clearInterval(timer.current)
+      document.removeEventListener('visibilitychange', onVisible)
+    }
+  }, [])
+
+  return { count, updatedAt }
+}
+
 export default function Home() {
   const stats = useMemo(() => {
     const q1 = routes.filter(r => r.income_quartile === 1)
     const q4 = routes.filter(r => r.income_quartile === 4)
     const q1Delay = q1.reduce((s, r) => s + r.avg_delay_min, 0) / q1.length
     const q4Delay = q4.reduce((s, r) => s + r.avg_delay_min, 0) / q4.length
-    const gap = ((q1Delay - q4Delay) / q4Delay * 100).toFixed(0)
+    const gap = ((q1Delay - q4Delay) / Math.abs(q4Delay) * 100).toFixed(0)
     const q1OnTime = (q1.reduce((s, r) => s + r.pct_on_time, 0) / q1.length).toFixed(1)
     const q4OnTime = (q4.reduce((s, r) => s + r.pct_on_time, 0) / q4.length).toFixed(1)
     const equityRoutes = routes.filter(r => r.equity_route)
     const eqDelay = (equityRoutes.reduce((s, r) => s + r.avg_delay_min, 0) / equityRoutes.length).toFixed(1)
-    const worst = [...routes].sort((a, b) => b.avg_delay_min - a.avg_delay_min).slice(0, 5)
+    // Worst-performing routes by delay, restricted to bus + light rail so the
+    // headline doesn't get dominated by the three (atypical, tourist) cable cars.
+    const worst = [...routes]
+      .filter(r => r.route_type !== 'cable_car')
+      .sort((a, b) => b.avg_delay_min - a.avg_delay_min)
+      .slice(0, 5)
     const totalObs = routes.reduce((s, r) => s + r.total_observations, 0)
     return { q1Delay: q1Delay.toFixed(1), q4Delay: q4Delay.toFixed(1), gap, q1OnTime, q4OnTime, eqDelay, worst, totalObs }
   }, [])
 
   const [statsRef, statsInView] = useInView({ threshold: 0.3 })
+  const [selectedRoute, setSelectedRoute] = useState(null)
+  const { count: liveCount, updatedAt: liveUpdatedAt } = useLiveVehicleCount()
+
+  const handleMapRouteClick = (shortId) => {
+    const route = routesByShortId[shortId]
+    if (route) setSelectedRoute(route)
+  }
 
   return (
     <div>
@@ -60,6 +109,22 @@ export default function Home() {
           <span className="mx-2 text-[var(--border)]">|</span>
           University of San Francisco, BUS 410
         </div>
+        {liveCount != null && (
+          <div className="mt-6 inline-flex items-center gap-2 text-[12px] text-[var(--muted)] anim-in anim-delay-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] pulse-dot" />
+            <span>
+              <strong className="text-[var(--ink)] tabular-nums">{liveCount}</strong> Muni vehicles in service right now
+              {liveUpdatedAt && (
+                <span className="text-[var(--muted)]/70">
+                  {' · '}updated {liveUpdatedAt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}
+                </span>
+              )}
+            </span>
+            <Link to="/live" className="ml-1 text-[var(--accent)] hover:underline whitespace-nowrap">
+              Live tracker &rarr;
+            </Link>
+          </div>
+        )}
       </header>
 
       {/* Big number callout */}
@@ -93,19 +158,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Map */}
+      {/* Explorer: interactive map + lookup */}
       <Section className="max-w-6xl mx-auto px-5 py-12 sm:py-16">
         <div className="mb-6">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[var(--muted)] mb-2">
+            Explore the system
+          </p>
           <h2 className="text-[clamp(1.4rem,3vw,1.75rem)] font-bold text-[var(--ink)]" style={{ fontFamily: 'var(--font-serif)' }}>
             Where income meets delay
           </h2>
-          <p className="mt-2 text-[14px] text-[var(--muted)] max-w-xl">
-            Purple areas are lower-income. Green areas are higher-income.
-            Red route lines indicate poor on-time performance. Notice the overlap.
+          <p className="mt-2 text-[14px] text-[var(--muted)] max-w-2xl">
+            Toggle the choropleth between median household income and average delay. Purple is
+            higher; green is lower. Lines are major Muni routes colored by on-time performance.
+            Click a line or search any route on the left to inspect its profile.
           </p>
         </div>
-        <div className="border border-[var(--border)] overflow-hidden" style={{ borderRadius: '3px' }}>
-          <Map className="h-[450px] sm:h-[580px]" />
+        <div className="grid lg:grid-cols-5 gap-5">
+          <div className="lg:col-span-2">
+            <RouteLookup
+              selectedRoute={selectedRoute}
+              onSelectRoute={setSelectedRoute}
+            />
+          </div>
+          <div className="lg:col-span-3">
+            <div className="border border-[var(--border)] overflow-hidden" style={{ borderRadius: '3px' }}>
+              <Map
+                className="h-[420px] sm:h-[540px]"
+                onRouteClick={handleMapRouteClick}
+              />
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -156,7 +238,7 @@ export default function Home() {
               The worst-performing routes
             </h2>
             <p className="mt-1 text-[14px] text-[var(--muted)]">
-              Ranked by average delay across the study period.
+              Bus and light-rail routes ranked by average delay across the study period. Cable cars excluded; see full rankings for the complete list.
             </p>
           </div>
           <Link to="/rankings" className="text-[13px] font-medium text-[var(--accent)] hover:underline whitespace-nowrap">
@@ -200,7 +282,7 @@ export default function Home() {
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
             This analysis uses {stats.totalObs.toLocaleString()} stop-level observations from 511.org
             GTFS archives covering December 2025 through February 2026, Census ACS 5-year median household income
-            estimates, and TIGER/Line tract boundaries. Routes are classified as "on-time" per the SFMTA
+            estimates, and TIGER/Line tract boundaries. Routes are classified as on-time per the SFMTA
             standard: arriving between 1 minute early and 5 minutes late.
           </p>
           <Link to="/methodology" className="inline-block mt-4 text-[13px] font-medium text-[var(--accent)] hover:underline">

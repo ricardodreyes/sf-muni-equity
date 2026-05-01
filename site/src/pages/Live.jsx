@@ -2,12 +2,13 @@ import { useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import mapboxgl from 'mapbox-gl'
 import { useTheme } from '../ThemeContext'
 import { checkMapLoad } from '../mapUsage'
-import routes from '../data/routes.json'
+import { routesByShortId } from '../data/routes'
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
 
 const POLL_INTERVAL = 90_000
-const routeDelayMap = Object.fromEntries(routes.map(r => [r.route_id, r]))
+// 511.org returns bare line refs ("14", "N"), so we key by route_id_short.
+const routeDelayMap = routesByShortId
 
 function computeLiveDelayByRoute(vehicles) {
   const byRoute = {}

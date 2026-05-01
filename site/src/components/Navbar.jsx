@@ -4,7 +4,6 @@ import { useTheme } from '../ThemeContext'
 const links = [
   { to: '/', label: 'Investigation' },
   { to: '/live', label: 'Live', live: true },
-  { to: '/explorer', label: 'Explorer' },
   { to: '/rankings', label: 'Rankings' },
   { to: '/methodology', label: 'Methodology' },
 ]

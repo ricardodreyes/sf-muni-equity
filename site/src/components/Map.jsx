@@ -2,11 +2,20 @@ import { useEffect, useRef, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import { useTheme } from '../ThemeContext'
 import { checkMapLoad } from '../mapUsage'
+import { routesByShortId } from '../data/routes'
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
 
 const LIGHT_STYLE = 'mapbox://styles/mapbox/light-v11'
 const DARK_STYLE = 'mapbox://styles/mapbox/dark-v11'
+
+const PURPLE_GREEN = ['#7b3294', '#c2a5cf', '#f7f7f7', '#a6dba0', '#008837']
+
+function classifyPerformance(pctOnTime) {
+  if (pctOnTime >= 65) return 'good'
+  if (pctOnTime >= 50) return 'fair'
+  return 'poor'
+}
 
 function esc(val) {
   return String(val).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -73,10 +82,32 @@ export default function Map({ onRouteClick, className = '' }) {
   async function addDataLayers() {
     if (!map.current) return
 
-    const [tractsRes, routesRes] = await Promise.all([
+    const [tractsRes, rawRoutesRes] = await Promise.all([
       fetch('/data/tracts.geojson').then(r => r.json()),
       fetch('/data/route-shapes.geojson').then(r => r.json()),
     ])
+
+    // Patch route shapes with canonical stats from routes.json (geojson props
+    // can be stale; routes.json is the source of truth).
+    const routesRes = {
+      ...rawRoutesRes,
+      features: rawRoutesRes.features.map(f => {
+        const live = routesByShortId[f.properties.route_id]
+        if (!live) return f
+        return {
+          ...f,
+          properties: {
+            ...f.properties,
+            route_id: live.route_id_short,
+            route_id_long: live.route_id,
+            route_name: live.route_name,
+            avg_delay_min: live.avg_delay_min,
+            pct_on_time: live.pct_on_time,
+            performance: classifyPerformance(live.pct_on_time),
+          },
+        }
+      }),
+    }
 
     // Census tracts choropleth
     if (map.current.getSource('tracts')) map.current.removeLayer('tracts-fill'), map.current.removeLayer('tracts-outline'), map.current.removeSource('tracts')
@@ -160,6 +191,7 @@ export default function Map({ onRouteClick, className = '' }) {
     // Click route line
     map.current.on('click', 'routes-line', (e) => {
       if (onRouteClick && e.features[0]) {
+        // route_id has been normalized to the short id in the patched feature collection
         onRouteClick(e.features[0].properties.route_id)
       }
     })
@@ -186,8 +218,8 @@ export default function Map({ onRouteClick, className = '' }) {
       ['==', ['typeof', ['get', 'avg_delay_min']], 'number'],
       [
         'interpolate', ['linear'], ['get', 'avg_delay_min'],
-        1.5, '#008837', 3, '#a6dba0', 4.5, '#f7f7f7',
-        5.5, '#c2a5cf', 7, '#7b3294',
+        0, '#008837', 1.5, '#a6dba0', 3, '#f7f7f7',
+        4.5, '#c2a5cf', 6, '#7b3294',
       ],
       'rgba(150, 150, 150, 0.25)',
     ]
@@ -265,17 +297,19 @@ export default function Map({ onRouteClick, className = '' }) {
           {layerMode === 'income' ? 'Median Household Income' : 'Average Delay'}
         </div>
         <div className="flex items-center gap-1">
-          <span>{layerMode === 'income' ? '$30k' : '1.5m'}</span>
+          {/* Income: low income (purple) on left, high (green) on right.
+              Delay:  low delay (green) on left, high (purple) on right. */}
+          <span>{layerMode === 'income' ? '$30k' : '0m'}</span>
           <div className="flex h-2.5 overflow-hidden" style={{ borderRadius: '1px' }}>
-            {['#7b3294', '#c2a5cf', '#f7f7f7', '#a6dba0', '#008837'].map((c) => (
-              <div key={c} className="w-5" style={{ background: c }} />
+            {(layerMode === 'income' ? PURPLE_GREEN : [...PURPLE_GREEN].reverse()).map((c, i) => (
+              <div key={`${layerMode}-${i}`} className="w-5" style={{ background: c }} />
             ))}
           </div>
-          <span>{layerMode === 'income' ? '$200k+' : '7m+'}</span>
+          <span>{layerMode === 'income' ? '$200k+' : '6m+'}</span>
         </div>
         <div className="flex items-center gap-2.5 mt-1.5">
-          <span className="flex items-center gap-1"><span className="w-3 h-[2px] bg-[#22c55e] inline-block" /> Good</span>
-          <span className="flex items-center gap-1"><span className="w-3 h-[2px] bg-[#eab308] inline-block" /> Fair</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-[2px] bg-[#22c55e] inline-block" /> Good (&ge;65% on-time)</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-[2px] bg-[#eab308] inline-block" /> Fair (&ge;50%)</span>
           <span className="flex items-center gap-1"><span className="w-3 h-[2px] bg-[#ef4444] inline-block" /> Poor</span>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { routes } from '../data/routes'
 import RankingsTable from '../components/RankingsTable'
 
 export default function Rankings() {
@@ -8,7 +9,7 @@ export default function Rankings() {
           Route Rankings
         </h1>
         <p className="mt-2 text-[14px] text-[var(--muted)] max-w-lg">
-          All {49} Muni routes ranked by on-time performance.
+          All {routes.length} Muni routes ranked by average delay.
           Click any column header to sort. Filter by type or income quartile.
         </p>
       </div>

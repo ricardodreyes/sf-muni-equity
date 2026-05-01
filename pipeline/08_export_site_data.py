@@ -57,6 +57,10 @@ def build_routes_json(con):
 
     routes = []
     for _, row in df.iterrows():
+        # TODO: route_type_str defaults to 'bus' for every row because the
+        # upstream tables don't carry GTFS route_type. Map GTFS values
+        # (0=light_rail, 3=bus, 5=cable_car) when this is rerun so the
+        # frontend override in site/src/data/routes.js can be removed.
         route = {
             "route_id": str(row.get('route_id', '')),
             "route_name": str(row.get('route_name', row.get('route_id', ''))),

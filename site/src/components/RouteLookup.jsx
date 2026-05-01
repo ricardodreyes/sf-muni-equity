@@ -1,23 +1,29 @@
 import { useState, useMemo } from 'react'
-import routes from '../data/routes.json'
+import { routes } from '../data/routes'
 import RouteCard from './RouteCard'
 
-export default function RouteLookup({ initialRouteId = null }) {
+const POPULAR_SHORT_IDS = ['14', '38', 'N', 'T', '22', '29', '49', '1']
+
+export default function RouteLookup({ selectedRoute: controlledRoute, onSelectRoute }) {
   const [query, setQuery] = useState('')
-  const [selectedRoute, setSelectedRoute] = useState(() =>
-    initialRouteId ? routes.find(r => r.route_id === initialRouteId) : null
-  )
+  const [internalRoute, setInternalRoute] = useState(null)
+  const isControlled = onSelectRoute != null
+  const selectedRoute = isControlled ? controlledRoute : internalRoute
 
   const filtered = useMemo(() => {
     if (!query.trim()) return []
     const q = query.toLowerCase()
     return routes
-      .filter(r => r.route_id.toLowerCase().includes(q) || r.route_name.toLowerCase().includes(q))
+      .filter(r =>
+        r.route_id_short.toLowerCase().includes(q) ||
+        r.route_name.toLowerCase().includes(q)
+      )
       .slice(0, 8)
   }, [query])
 
   const selectRoute = (route) => {
-    setSelectedRoute(route)
+    if (isControlled) onSelectRoute(route)
+    else setInternalRoute(route)
     setQuery('')
   }
 
@@ -60,16 +66,18 @@ export default function RouteLookup({ initialRouteId = null }) {
         <div className="mt-4">
           <p className="text-[11px] uppercase tracking-wider font-semibold text-[var(--muted)] mb-2">Popular routes</p>
           <div className="flex flex-wrap gap-1.5">
-            {routes.filter(r => ['14', '38', 'N', 'T', '22', '29', '49', '1'].includes(r.route_id)).map(r => (
-              <button
-                key={r.route_id}
-                onClick={() => selectRoute(r)}
-                className="px-2.5 py-1 border border-[var(--border)] text-[12px] font-medium text-[var(--muted)] hover:text-[var(--ink)] hover:border-[var(--ink)] transition-colors"
-                style={{ borderRadius: '3px' }}
-              >
-                {r.route_name}
-              </button>
-            ))}
+            {routes
+              .filter(r => POPULAR_SHORT_IDS.includes(r.route_id_short))
+              .map(r => (
+                <button
+                  key={r.route_id}
+                  onClick={() => selectRoute(r)}
+                  className="px-2.5 py-1 border border-[var(--border)] text-[12px] font-medium text-[var(--muted)] hover:text-[var(--ink)] hover:border-[var(--ink)] transition-colors"
+                  style={{ borderRadius: '3px' }}
+                >
+                  {r.route_name}
+                </button>
+              ))}
           </div>
         </div>
       )}
