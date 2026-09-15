@@ -7,8 +7,6 @@ export default function Footer() {
             <span className="font-semibold text-[var(--ink)]" style={{ fontFamily: 'var(--font-serif)' }}>
               SF Muni Equity Tracker
             </span>
-            <span className="mx-2 text-[var(--border)]">|</span>
-            Personal portfolio project
           </div>
           <div className="text-right">
             Built and maintained by Ricardo Reyes

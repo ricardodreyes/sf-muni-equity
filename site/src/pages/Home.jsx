@@ -105,9 +105,7 @@ export default function Home() {
           longer, more often, than those in wealthier parts of the city.
         </p>
         <div className="mt-4 text-[12px] text-[var(--muted)] anim-in anim-delay-3">
-          Pipeline, website and visualizations by Ricardo Reyes
-          <span className="mx-2 text-[var(--border)]">|</span>
-          Personal portfolio project
+          By Ricardo Reyes
         </div>
         {liveCount != null && (
           <div className="mt-6 inline-flex items-center gap-2 text-[12px] text-[var(--muted)] anim-in anim-delay-3">
