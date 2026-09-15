@@ -8,10 +8,10 @@ export default function Footer() {
               SF Muni Equity Tracker
             </span>
             <span className="mx-2 text-[var(--border)]">|</span>
-            BUS 410, University of San Francisco, Spring 2026
+            Personal portfolio project
           </div>
           <div className="text-right">
-            Harrison Ma, Brayden Awaya, Ricardo Reyes, Takehiro Ishiguro
+            Built and maintained by Ricardo Reyes
           </div>
         </div>
         <div className="mt-3 text-[11px] text-[var(--muted)]/60">

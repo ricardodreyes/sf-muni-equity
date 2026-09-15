@@ -73,11 +73,11 @@ Deploys are `vercel deploy --prod --yes` from `site/`. `API_KEY_511` and `VITE_M
 - SFMTA equity route list and the on-time standard.
 - 511.org SIRI VehicleMonitoring and StopMonitoring for the live tracker.
 
-## Affiliation
+## Project ownership
 
-A BUS 410 (Business Analytics) group project at the University of San Francisco, Spring 2026, by Harrison Ma, Brayden Awaya, Ricardo Reyes and Takehiro Ishiguro. Not an SFMTA or 511.org site.
+Ricardo Reyes built the data pipeline, website and visualizations, and maintains this as a personal portfolio project.
 
-Pipeline, site and deploy by Ricardo Reyes.
+Not an SFMTA or 511.org site.
 
 ## License
 

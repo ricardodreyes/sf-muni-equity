@@ -84,10 +84,7 @@ export default function Methodology() {
 
       <section className="mt-10 border-t border-[var(--border)] pt-8">
         <p className="text-[13px] text-[var(--muted)]">
-          <strong className="text-[var(--ink)]">Team:</strong> Harrison Ma, Brayden Awaya, Ricardo Reyes, Takehiro Ishiguro
-        </p>
-        <p className="text-[13px] text-[var(--muted)] mt-1">
-          University of San Francisco, BUS 410 Business Analytics, Spring 2026
+          <strong className="text-[var(--ink)]">Built and maintained by Ricardo Reyes.</strong> Pipeline, website and visualizations.
         </p>
       </section>
     </article>
